@@ -137,7 +137,7 @@
         const text = await res.text();
         bodyEl.innerHTML = "";
         bodyEl.appendChild(renderMarkdown(text));
-        setStatus(url.startsWith("assets/") ? "Loaded from bundled snapshot." : "Loaded from symbia-seed main.", "muted");
+        setStatus("", "muted");
         return;
       } catch (err) {
         console.warn("Doc load attempt failed", url, err);
