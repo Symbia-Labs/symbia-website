@@ -27,6 +27,7 @@
     <nav class="nav-links">
       <a href="#primitives">Continuity Primitives</a>
       <a href="#surfaces">Surfaces</a>
+      <a href="#docs">Docs &amp; API</a>
       <a href="#pillars">Pillars</a>
       <a href="#developers">Developers</a>
       <a class="outline" href="mailto:hello@symbia-labs.com">Contact Us</a>
@@ -260,18 +261,75 @@
 
     <section class="section" id="docs">
       <div class="section-head">
-        <p class="eyebrow">Documentation (Public Overview)</p>
-        <h2>A simplified view of the Symbia documentation tree.</h2>
-        <p class="section-lede">Explore the public docs without exposing internal implementation details. Request access for full Seed internals.</p>
+        <p class="eyebrow">Docs &amp; API</p>
+        <h2>Public docs and the OpenAPI surface in one place.</h2>
+        <p class="section-lede">Preview a curated set of docs and inspect the OpenAPI spec. Request access for the full Seed internals and private sections.</p>
       </div>
-      <div class="docs-viewer card" data-flock-target>
-        <p class="muted">Docs viewer placeholder — uses /docs/public-tree.json (expandable tree).</p>
-        <div class="doc-tree-placeholder">
-          <div class="doc-node">docs/</div>
-          <div class="doc-node child">architecture/</div>
-          <div class="doc-node child">identity/</div>
-          <div class="doc-node child">governance/</div>
-          <div class="doc-node child">concept/</div>
+      <div class="docs-grid">
+        <div class="card docs-panel" data-flock-target>
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Docs Explorer</p>
+              <h3>High-signal public docs</h3>
+              <p class="muted">Loaded live from the symbia-seed repo (main branch).</p>
+            </div>
+            <div class="doc-actions">
+              <a class="btn inline" href="https://github.com/Symbia-Labs/symbia-seed/tree/main/docs" target="_blank" rel="noreferrer">Docs on GitHub</a>
+              <a class="btn ghost" href="mailto:hello@symbia-labs.com">Request full access</a>
+            </div>
+          </div>
+          <div class="docs-browser">
+            <div class="doc-list" id="doc-list"></div>
+            <div class="doc-viewer">
+              <div class="doc-meta">
+                <div>
+                  <p class="eyebrow">Document</p>
+                  <p class="label" id="doc-path">Select a document</p>
+                </div>
+                <a class="btn inline" id="doc-open-gh" href="#" target="_blank" rel="noreferrer">Open on GitHub</a>
+              </div>
+              <div class="doc-body" id="doc-body">
+                <p class="muted">Choose a document to preview.</p>
+              </div>
+              <div class="doc-status" id="doc-status"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card api-panel" data-flock-target>
+          <p class="eyebrow">API surface</p>
+          <h3>OpenAPI + live endpoints</h3>
+          <p class="muted">Review health, status, docs, logs, chat, and worker endpoints. Open Swagger for the full schema or download the spec directly.</p>
+          <div class="endpoint-grid">
+            <div class="endpoint">
+              <p class="label">/health</p>
+              <p class="muted small">Minimal uptime + version.</p>
+            </div>
+            <div class="endpoint">
+              <p class="label">/status</p>
+              <p class="muted small">Seed + workers + persistence snapshot.</p>
+            </div>
+            <div class="endpoint">
+              <p class="label">/docs/index</p>
+              <p class="muted small">Public docs tree.</p>
+            </div>
+            <div class="endpoint">
+              <p class="label">/trace/tail</p>
+              <p class="muted small">Recent cognitive events.</p>
+            </div>
+            <div class="endpoint">
+              <p class="label">/chat/complete</p>
+              <p class="muted small">Chat relay with context.</p>
+            </div>
+            <div class="endpoint">
+              <p class="label">/openapi.yaml</p>
+              <p class="muted small">OpenAPI 3.0 spec.</p>
+            </div>
+          </div>
+          <div class="cta-row">
+            <a class="btn primary" href="api.html">Open API Explorer</a>
+            <a class="btn ghost" href="assets/openapi.yaml" download>Download YAML</a>
+            <a class="btn inline" href="https://github.com/Symbia-Labs/symbia-seed/blob/main/docs/architecture/openapi.yaml" target="_blank" rel="noreferrer">Source</a>
+          </div>
         </div>
       </div>
     </section>
@@ -518,6 +576,7 @@
     </div>
   </div>
   <script src="bg.js"></script>
+  <script src="scripts/docs-api.js"></script>
   <script src="scripts/hero-rotation.js"></script>
   <!-- GA4 analytics will be injected by privacy.js after consent -->
   <script src="scripts/privacy.js"></script>
