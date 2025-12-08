@@ -2,11 +2,11 @@
   const repoRaw = "https://raw.githubusercontent.com/Symbia-Labs/symbia-seed/main/";
   const repoWeb = "https://github.com/Symbia-Labs/symbia-seed/blob/main/";
   const docs = [
-    { id: "quickstart", title: "Quickstart & Boot", path: "docs/architecture/quickstart.md" },
-    { id: "cli", title: "CLI + Observer", path: "docs/architecture/seed/cli.md" },
-    { id: "logging", title: "Logging Subsystem", path: "docs/architecture/logging-subsystem.md" },
-    { id: "security", title: "Security & Genesis Key", path: "docs/architecture/seed/security.md" },
-    { id: "premise", title: "Premise", path: "docs/concept/premise.md" },
+    { id: "quickstart", title: "Quickstart & Boot", path: "docs/architecture/quickstart.md", local: "assets/docs/quickstart.md" },
+    { id: "cli", title: "CLI + Observer", path: "docs/architecture/seed/cli.md", local: "assets/docs/cli.md" },
+    { id: "logging", title: "Logging Subsystem", path: "docs/architecture/logging-subsystem.md", local: "assets/docs/logging-subsystem.md" },
+    { id: "security", title: "Security & Genesis Key", path: "docs/architecture/seed/security.md", local: "assets/docs/security.md" },
+    { id: "premise", title: "Premise", path: "docs/concept/premise.md", local: "assets/docs/premise.md" },
   ];
 
   const listEl = document.getElementById("doc-list");
@@ -125,18 +125,27 @@
     }
     bodyEl.innerHTML = "<p class=\"muted\">Loading…</p>";
     setStatus("");
-    try {
-      const res = await fetch(`${repoRaw}${doc.path}`);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const text = await res.text();
-      bodyEl.innerHTML = "";
-      bodyEl.appendChild(renderMarkdown(text));
-      setStatus("Loaded from main branch.", "muted");
-    } catch (err) {
-      bodyEl.innerHTML = "<p class=\"muted\">Failed to load document.</p>";
-      setStatus(`Could not fetch ${doc.path} — ${err}`, "error");
-      console.error("Doc load error", err);
+
+    const sources = [];
+    if (doc.local) sources.push(doc.local);
+    sources.push(`${repoRaw}${doc.path}`);
+
+    for (const url of sources) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        bodyEl.innerHTML = "";
+        bodyEl.appendChild(renderMarkdown(text));
+        setStatus(url.startsWith("assets/") ? "Loaded from bundled snapshot." : "Loaded from symbia-seed main.", "muted");
+        return;
+      } catch (err) {
+        console.warn("Doc load attempt failed", url, err);
+      }
     }
+
+    bodyEl.innerHTML = "<p class=\"muted\">Failed to load document.</p>";
+    setStatus(`Could not fetch ${doc.path} locally or from GitHub.`, "error");
   }
 
   function buildList() {
