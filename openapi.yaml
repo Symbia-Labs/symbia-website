@@ -1,0 +1,310 @@
+openapi: 3.0.3
+info:
+  title: Symbia Seed API
+  version: "0.2"
+  description: >
+    Local API for Symbia Seed: threads, chat, reflection, file access, tracing, terminal, workers, and config.
+    Identity/Symbia Key is enforced for lineage/verification where available; see docs/architecture/symbia-key.md.
+servers:
+  - url: http://127.0.0.1:8123
+paths:
+  /health:
+    get:
+      summary: Health check (minimal)
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  version:
+                    type: string
+                  uptime_seconds:
+                    type: integer
+  /status:
+    get:
+      summary: Health/status summary
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  cwd:
+                    type: string
+  /config:
+    get:
+      summary: Effective configuration (scrubbed)
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /admin/extensions:
+    get:
+      summary: Loaded extensions manifest
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /persistence/status:
+    get:
+      summary: Persistence/broker status
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: object
+                  properties:
+                    enabled:
+                      type: boolean
+                    status:
+                      type: string
+  /broker/status:
+    get:
+      summary: Broker status
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  /broker/publish:
+    post:
+      summary: Publish to broker
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                topic:
+                  type: string
+                payload:
+                  type: object
+              required: [topic, payload]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+  /list:
+    get:
+      summary: List files under repo root
+      parameters:
+        - in: query
+          name: prefix
+          schema:
+            type: string
+          required: false
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  files:
+                    type: array
+                    items:
+                      type: string
+  /project/file:
+    get:
+      summary: Read file
+      parameters:
+        - in: query
+          name: path
+          schema:
+            type: string
+          required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  path:
+                    type: string
+                  content:
+                    type: string
+        "404":
+          description: Not found
+  /edit:
+    post:
+      summary: Edit file (overwrite/append)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditRequest"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  mode:
+                    type: string
+  /event:
+    post:
+      summary: Append single event to cognitive-trace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Event"
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+  /trace:
+    post:
+      summary: Append multiple events to cognitive-trace
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                events:
+                  type: array
+                  items:
+                    $ref: "#/components/schemas/Event"
+              required: [events]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  count:
+                    type: integer
+  /log/stream:
+    get:
+      summary: Stream cognitive trace (SSE)
+      responses:
+        "200":
+          description: text/event-stream
+          content:
+            text/event-stream:
+              schema:
+                type: string
+  /terminal/exec:
+    post:
+      summary: Execute whitelisted terminal command
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cmd:
+                  type: string
+              required: [cmd]
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  stdout:
+                    type: string
+                  stderr:
+                    type: string
+        "403":
+          description: Command not allowed
+  /project/snapshot:
+    get:
+      summary: File modification snapshot
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  root:
+                    type: string
+                  files:
+                    type: object
+                    additionalProperties:
+                      type: number
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        source:
+          type: string
+        type:
+          type: string
+        message:
+          type: string
+        metadata:
+          type: object
+      required: [source, type, message]
+    EditRequest:
+      type: object
+      properties:
+        edit:
+          type: object
+          properties:
+            file:
+              type: string
+            mode:
+              type: string
+              enum: [overwrite, append]
+            content:
+              type: string
+          required: [file, mode, content]
+      required: [edit]
