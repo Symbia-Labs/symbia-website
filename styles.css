@@ -295,6 +295,20 @@ a.outline {
   z-index: 1;
 }
 
+.section-narrow {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-narrow p {
+  max-width: 980px;
+}
+
+.section-narrow ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
 .section-head { max-width: 900px; margin: 0 auto 32px; text-align: left; }
 .section-head h2 { margin: 6px 0; font-size: clamp(26px, 3vw, 34px); }
 .section-lede { margin: 0; color: var(--muted); font-size: 18px; line-height: 1.5; }
