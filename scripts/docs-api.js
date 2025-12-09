@@ -1,5 +1,5 @@
 (function () {
-  const docs = [
+  const fallbackDocs = [
     { id: "quickstart", title: "Quickstart & Boot", path: "docs/architecture/quickstart.md" },
     { id: "cli", title: "CLI + Observer", path: "docs/architecture/seed/cli.md" },
     { id: "logging", title: "Logging Subsystem", path: "docs/architecture/logging-subsystem.md" },
@@ -12,6 +12,7 @@
   const pathEl = document.getElementById("doc-path");
   const ghBtn = document.getElementById("doc-open-gh");
   const statusEl = document.getElementById("doc-status");
+  let docs = fallbackDocs.slice();
 
   if (!listEl || !bodyEl || !pathEl) return;
 
@@ -114,8 +115,9 @@
   }
 
   async function loadDoc(doc) {
+    const docId = doc.id || doc.path;
     listEl.querySelectorAll(".doc-item").forEach((btn) => {
-      btn.classList.toggle("active", btn.dataset.docId === doc.id);
+      btn.classList.toggle("active", btn.dataset.docId === docId);
     });
     pathEl.textContent = doc.path;
     if (ghBtn) {
@@ -138,7 +140,34 @@
     }
   }
 
-  function buildList() {
+  function normalizeDocs(rawDocs) {
+    const seen = new Set();
+    return rawDocs
+      .map((doc) => {
+        const id = doc.id || doc.path;
+        if (!id || !doc.path) return null;
+        if (seen.has(id)) return null;
+        seen.add(id);
+        return { ...doc, id };
+      })
+      .filter(Boolean);
+  }
+
+  async function fetchDocs() {
+    try {
+      const res = await fetch("docs/docs-index.json?v=1");
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (Array.isArray(data)) return data;
+      if (data && Array.isArray(data.docs)) return data.docs;
+    } catch (err) {
+      console.warn("Docs index fetch failed, using fallback", err);
+    }
+    return fallbackDocs;
+  }
+
+  async function buildList() {
+    docs = normalizeDocs(await fetchDocs());
     listEl.innerHTML = "";
     docs.forEach((doc, i) => {
       const btn = document.createElement("button");
