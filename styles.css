@@ -416,14 +416,14 @@ a.outline {
 .docs-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; max-width: 1200px; margin: 0 auto; }
 .docs-panel .panel-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
 .doc-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-.docs-browser { display: grid; grid-template-columns: minmax(200px, 240px) 1fr; gap: 12px; margin-top: 12px; }
-.doc-list { display: flex; flex-direction: column; gap: 8px; }
+.docs-browser { display: grid; grid-template-columns: minmax(200px, 240px) 1fr; gap: 12px; margin-top: 12px; align-items: flex-start; }
+.doc-list { display: flex; flex-direction: column; gap: 8px; max-height: 70vh; overflow-y: auto; padding-right: 6px; }
 .doc-item { width: 100%; text-align: left; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); color: var(--text); font-weight: 700; cursor: pointer; transition: border-color 0.12s ease, box-shadow 0.12s ease; }
 .doc-item:hover { border-color: var(--accent); box-shadow: var(--glow); }
 .doc-item.active { border-color: var(--accent); box-shadow: var(--glow); background: rgba(92,223,223,0.08); color: var(--text); }
 .doc-viewer { border: 1px solid var(--border); border-radius: 12px; padding: 12px; background: rgba(255,255,255,0.02); display: grid; gap: 10px; min-height: 320px; box-shadow: var(--shadow); }
 .doc-meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
-.doc-body { max-height: 420px; overflow-y: auto; padding-right: 6px; }
+.doc-body { max-height: 70vh; overflow-y: auto; padding-right: 6px; }
 .doc-status { font-size: 12px; color: var(--muted); }
 .doc-status.error { color: #ff9b9b; }
 .markdown h2, .markdown h3, .markdown h4 { margin: 8px 0 4px; }
@@ -492,6 +492,8 @@ a.outline {
   .cta-card { flex-direction: column; align-items: flex-start; }
   .docs-grid { grid-template-columns: 1fr; }
   .docs-browser { grid-template-columns: 1fr; }
+  .doc-list { max-height: none; padding-right: 0; }
+  .doc-body { max-height: none; }
 }
 
 @media (max-width: 640px) {
