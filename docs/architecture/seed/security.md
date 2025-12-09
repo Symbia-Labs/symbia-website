@@ -8,6 +8,7 @@ Mechanism:
 - Signed genesis: `${STATE_DIR}/keys/genesis.json` + `${STATE_DIR}/keys/genesis.sig` (sshsig) + `${STATE_DIR}/keys/genesis.pub` (OpenSSH pubkey). If missing on first run, the daemon copies the shipped `daemon/keys/*` into `${STATE_DIR}/keys/`.
 - Verification uses `ssh-keygen -Y verify` on startup; the result surfaces in `/status.genesis_verify` and `python3 daemon/symbia.py key verify`. Current alpha builds log failures but do not block startup.
 - CLI `python3 daemon/symbia.py key verify` reports sha256 and signature status.
+- Strict mode: set `SYMBIA_STRICT_GENESIS=1` to fail key derivation if verification fails (raises).
 
 Operational steps:
 - Private key stays with the author (e.g., `~/.ssh/symbia-genesis`, perms 600 or hardware token). Never commit it.
@@ -25,6 +26,7 @@ Rotation/remediation:
 - Issue a new pubkey + signature; distribute with the release.
 - If a key is compromised, refuse old keys and require the new pubkey/signature at startup.
 - Enforcement note: startup currently continues even if verification fails (e.g., missing genesis). Treat `/status.genesis_verify.ok=false` as a security warning until enforcement is enabled.
+- Derivation note: local/user keys are ed25519 pairs generated locally; fingerprints use HMAC-SHA3-512 over canonical JSON (label `SYMKEY_DERIVATION_V1`) bound to genesis/install/policy hashes. Private PEMs are stored under `${STATE_DIR}/keys/` with 0600 perms.
 
 ## Portability and updates
 - Genesis updates: any change to `genesis.json` must be re-signed; ship `genesis.json` + `genesis.sig` + `genesis.pub` together. Update the pinned hash in code/docs. Startup verification blocks mismatched or stale files.
@@ -46,6 +48,7 @@ Rotation/remediation:
    ```
    This writes `${STATE_DIR}/keys/install.json`, `${STATE_DIR}/keys/local.json`, `${STATE_DIR}/keys/user.json` after verifying genesis.
 3) Inspect: `python3 daemon/symbia.py key inspect` lists genesis metadata and derived key paths.
+4) Enforce strict genesis during derivation: `SYMBIA_STRICT_GENESIS=1 python3 - <<'PY' ... PY` (raises if `verify_genesis_signature` fails).
 
 ## User data protection (policy)
 - Repo hygiene: the repo carries only genesis/signature/public assets; no user data is ever committed. User data stays local on the installed machine.

@@ -21,6 +21,7 @@ Module Layout (selected)
 - `broker/` — dummy broker; MQTT placeholder.
 - `util/` — fsync, atomic write, tracing helpers.
 - `workers/` — supervisor + relay/status workers (Interpreter/Service lanes); lifecycle/status surface.
+- `governance.py` — mode/crypto/audit helpers (creative/autonomous/restricted), canonical JSON + HMAC-SHA3-512 fingerprints, allowance checks for fs/net/shell/tools/keys/artifacts, audit-failure policy lookup.
 
 Persistence and Providers
 -------------------------
@@ -33,6 +34,8 @@ Identity, Continuity, Constraints, Lineage
 - `/status`: age from genesis/install; version `alpha1-<t0_iso>`; server_time_ms for skew.
 - `/identity/snapshot`: identity_id, traits, roles, preferences/constraints + SHA-256 hashes (constraint-sets), install/local/user blobs.
 - Lineage: trace + reflection logs; UI swimlanes grouped by O→I→P→A + Identity/Continuity.
+- Governance/crypto surface: `/governance/config` returns active mode, modes table, audit behavior, snapshot retention, crypto primitives (ed25519 signatures, sha256 envelope hash, HMAC-SHA3-512 fingerprints labeled `SYMKEY_DERIVATION_V1`).
+- Key derivation: `core/keys.py` now generates ed25519 keypairs for local/user, fingerprints via HMAC-SHA3-512 over canonical JSON bound to genesis/install/policy; private keys live under state dir. Set `SYMBIA_STRICT_GENESIS=1` to enforce genesis signature at derivation time (raises on failure).
 
 Trace and Events
 ----------------

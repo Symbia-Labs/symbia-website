@@ -14,6 +14,7 @@ This outlines the minimal steps to bring up the Seed (API, supervisor, workers, 
 - State dir: defaults to `~/.symbia-seed-<install_id>` (auto-derived; pointer at `~/.symbia-seed-current`). Override with `SYMBIA_STATE_DIR` or disable auto-naming with `SEED_AUTO_STATE=0`.
 - On first run, any shipped demo keys in `daemon/keys/*` are copied into the state dir (`~/.symbia-seed-*/keys` by default).
 - Optional portable install: run `./daemon/symbia-installer.sh` to copy into your chosen install path with first-run prompts + hooks; state defaults to `~/.symbia-seed` (override `SYMBIA_STATE_DIR`).
+- Governance helpers live in `daemon/core/governance.py` (modes/crypto/audit); active config is exposed at `/governance/config`.
 
 ## One-command boot (recommended)
 From the repo root:
@@ -57,6 +58,7 @@ curl -s http://127.0.0.1:8123/persistence/status
 curl -s http://127.0.0.1:8123/workers/status
 curl -s http://127.0.0.1:8123/trace/tail?limit=10
 curl -s http://127.0.0.1:8123/reflection/events?limit=10
+curl -s http://127.0.0.1:8123/governance/config | jq
 ```
 
 ## Logs
@@ -87,3 +89,8 @@ curl -s http://127.0.0.1:8123/reflection/events?limit=10
 - `/reflection/events` — reflection tail (doc/mission lifecycle events)
 - `/logs/index` + `/logs/file?path=...` — list and read logs under `${SYMBIA_STATE_DIR}/logs`
 - Dashboard shows Service Telemetry (Observer/Interpreter/Processor/Actor/Editor/Terminal/System/Time) and Cognitive Telemetry (Decisions/Evaluations/Checkpoints/Breakthroughs/Reflection/Events) using in-memory tails.
+
+## Keys and genesis (alpha1)
+- Genesis assets live in `${SYMBIA_STATE_DIR}/keys/` (`genesis.json`, `.sig`, `.pub`). On first run, shipped demo keys copy from `daemon/keys/` if missing.
+- Verification: `python3 daemon/symbia.py key verify` (sshsig via `ssh-keygen -Y verify`); strict mode via `SYMBIA_STRICT_GENESIS=1` raises on failure during key derivation.
+- Derived keys: `core/keys.py` now generates ed25519 keypairs for local/user; fingerprints use HMAC-SHA3-512 over canonical JSON bound to genesis/install/policy (label `SYMKEY_DERIVATION_V1`). Private PEMs stay under `${SYMBIA_STATE_DIR}/keys/` with 0600 perms; public PEM/OpenSSH are embedded in `local.json`/`user.json`.

@@ -1,10 +1,10 @@
 (function () {
   const docs = [
-    { id: "quickstart", title: "Quickstart & Boot", path: "assets/docs/quickstart.md" },
-    { id: "cli", title: "CLI + Observer", path: "assets/docs/cli.md" },
-    { id: "logging", title: "Logging Subsystem", path: "assets/docs/logging-subsystem.md" },
-    { id: "security", title: "Security & Genesis Key", path: "assets/docs/security.md" },
-    { id: "premise", title: "Premise", path: "assets/docs/premise.md" },
+    { id: "quickstart", title: "Quickstart & Boot", path: "docs/architecture/quickstart.md" },
+    { id: "cli", title: "CLI + Observer", path: "docs/architecture/seed/cli.md" },
+    { id: "logging", title: "Logging Subsystem", path: "docs/architecture/logging-subsystem.md" },
+    { id: "security", title: "Security & Genesis Key", path: "docs/architecture/seed/security.md" },
+    { id: "premise", title: "Premise", path: "docs/concept/premise.md" },
   ];
 
   const listEl = document.getElementById("doc-list");
