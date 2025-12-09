@@ -265,12 +265,8 @@
         list.appendChild(btn);
       });
 
-      if (open) {
-        wrapper.appendChild(header);
-        wrapper.appendChild(list);
-      } else {
-        wrapper.appendChild(header);
-      }
+      wrapper.appendChild(header);
+      wrapper.appendChild(list);
       sectionsRoot.appendChild(wrapper);
     });
   }
