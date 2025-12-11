@@ -33,6 +33,10 @@
       "title": "Logging Subsystem"
     },
     {
+      "path": "docs/architecture/missions/seed.spawn-retire.contract.v1.md",
+      "title": "Mission: seed.spawn-retire.contract.v1"
+    },
+    {
       "path": "docs/architecture/missions-and-actors.md",
       "title": "Missions & Actors (Conceptual Draft)"
     },
@@ -149,8 +153,20 @@
       "title": "Threat Model"
     },
     {
+      "path": "docs/identity/README.md",
+      "title": "Identity Docs Index"
+    },
+    {
+      "path": "docs/identity/key-update-quickstart.md",
+      "title": "Identity Key Update Quickstart"
+    },
+    {
       "path": "docs/identity/persona.md",
       "title": "Persona Mirroring"
+    },
+    {
+      "path": "docs/identity/updating.md",
+      "title": "Identity Envelope Update Recommendations"
     },
     {
       "path": "docs/integrations/mcp_server.md",

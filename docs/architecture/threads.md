@@ -25,5 +25,5 @@
 - **Missions per thread**: `/threads/start` creates `~/.symbia-seed/missions/<thread>.yaml` by extending the OEP/GKS template; `/threads/stop` stops and marks the thread; `/threads/list` lists threads.
 
 Implementation status:
-- UI (`daemon/web/js/app.js`) sends the thread block with `thread_id`, anchor, and history; falls back to offline when providers are missing.
+- UI (`symbia-seed-web/js/app.js`, served from `../symbia-seed-web`) sends the thread block with `thread_id`, anchor, and history; falls back to offline when providers are missing.
 - API accepts extra fields without schema errors; reflection worker already ingests payloads and will carry thread metadata once interpreter wiring is added.

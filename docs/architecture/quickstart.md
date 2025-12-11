@@ -22,6 +22,12 @@ From the repo root:
 ./scripts/seed.sh boot
 # Uses chat gateway defaults from daemon/core/config/user.yaml
 # Starts: API (8123), supervisor/relay workers, web UI (http://localhost:9000/)
+# Launch 5 concurrent instances on rotating ports with isolated state dirs:
+./scripts/symbia start --5
+  # api ports: 18123-18127, ui ports: 19001-19005
+  # state dirs: ~/symbia-seed-multi/<timestamp>/instance1..N
+# Stop all multi-instance seeds under the default pool:
+./scripts/symbia stop --all
 ```
 
 Control commands:
@@ -65,15 +71,17 @@ curl -s http://127.0.0.1:8123/governance/config | jq
 - API: `~/.symbia-seed/logs/symbia-seed.api.log` (or `${SYMBIA_STATE_DIR}/logs`)
 - Supervisor/workers: `${SYMBIA_STATE_DIR}/logs/symbia-seed.supervisor.log`
 - Cognitive trace: `${SYMBIA_STATE_DIR}/logs/cognitive-trace.log` (append + fsync)
-- Reflection events: `${SYMBIA_STATE_DIR}/logs/reflection/events.ndjson`
+- Reflection events: `${SYMBIA_STATE_DIR}/logs/reflection/events.ndjson` (all contract/docs/log actions use a unified `log_event` helper)
+- Contract ledger: `${SYMBIA_STATE_DIR}/logs/contract-events.log` (spawn/heartbeat/retire verification)
 
 ## Useful URLs
-- Dashboard/observer: `http://localhost:9000/`
+- Dashboard/observer (serve `../symbia-seed-web` locally or set `SYMBIA_WEB_DIR`): `http://localhost:9000/`
 - Swagger UI: `http://127.0.0.1:8123/docs/swagger`
 - OpenAPI YAML: `http://127.0.0.1:8123/openapi.yaml`
 - Health: `http://127.0.0.1:8123/health`
-- Docs Viewer: `http://localhost:9000/docs.html`
-- Logs Viewer: `http://localhost:9000/logs.html`
+- Docs Viewer (web UI): `http://localhost:9000/docs.html`
+- Logs Viewer (web UI): `http://localhost:9000/logs.html`
+- API docs/logs routes are also directly available: `/docs/index`, `/docs/file?path=...`, `/logs/index`, `/logs/file?path=...`
 
 ## MCP Adapter (Model Context Protocol)
 - Start the MCP bridge over stdio: `python -m seed.mcp_server` (respects `SEED_API_URL`).
