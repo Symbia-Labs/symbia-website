@@ -1,0 +1,379 @@
+hero_enterprise:
+  level_1:
+    headline: Symbia keeps AI on track.
+    subhead: Your team’s AI remembers what happened and can show its work.
+    body: AI often feels like a black box. Symbia gives it memory and a paper trail so you can trust what it does over time.
+  level_2:
+    headline: Symbia gives AI a memory and receipts.
+    subhead: Your AI keeps context, identity, and the why behind every step.
+    body: One-off prompts forget. Symbia keeps a living record so results stay steady and explainable.
+  level_3:
+    headline: Symbia is the execution layer your AI systems are missing.
+    subhead: Deterministic identity, inspectable traces, and observable endpoints keep teams aligned.
+    body: Canon -> Abstraction -> Artifact turns missions into auditable outputs with signed lineage and supervised workers.
+  level_4:
+    headline: Execution layer above protocols, with identity canon and epistemic contract.
+    subhead: Deterministic identity (GKS) plus OEP-coded evidence keeps runs governable across environments.
+    body: Canon -> Abstraction -> Artifact makes missions reproducible; workers route under policy; traces stay replayable via API/UI.
+  level_5:
+    headline: Execution substrate with GKS-anchored canon and OEP-bound evidence.
+    subhead: Identity, lineage, and epistemic obligations keep stochastic steps bounded; transports remain interchangeable.
+    body: Canon -> Abstraction -> Artifact exposes assumptions: deterministic canon, constrained routing, artifacts with cited provenance and drift detection.
+
+hero_creatives:
+  level_1:
+    headline: Your work keeps its story.
+    subhead: Every draft, edit, and note stays linked, not lost.
+    body: Symbia remembers choices and shows how a draft became the final piece.
+  level_2:
+    headline: Creativity with a memory and a paper trail.
+    subhead: Keep style, constraints, and decisions connected across tools.
+    body: Missions and revisions stay in one canon so outputs carry their provenance.
+  level_3:
+    headline: Canon -> Abstraction -> Artifact for teams that ship.
+    subhead: Missions and revisions land in canon; workers route via OEP; artifacts inherit lineage.
+    body: Observer UI and ledgers show how a draft moved to done with cited evidence.
+  level_4:
+    headline: Canonized intent, governed routing, attributed artifacts.
+    subhead: Genesis Key lineage on missions; OEP evidence on worker hops; artifacts cite their path.
+    body: Supervisor enforces constraints; Observer UI exposes canon deltas and trace segments per run.
+  level_5:
+    headline: Canon with signed lineage; abstraction under policy; artifacts with cited proofs.
+    subhead: Missions/logs bind to GKS fingerprints; worker hops carry OEP claims; artifacts surface epistemic status.
+    body: Replayable traces make creative outputs falsifiable; drift and constraint violations are first-class events.
+
+hero_personal:
+  level_1:
+    headline: An AI that remembers you.
+    subhead: It keeps your preferences and shows how it decided.
+    body: Every suggestion has a trace you can review; nothing resets when you come back.
+  level_2:
+    headline: Deterministic memory for assistants that learn you.
+    subhead: Preferences and constraints stay stable; steps stay explainable.
+    body: Symbia Key holds “who you are”; traces show how each answer was formed.
+  level_3:
+    headline: Deterministic memory for assistants that learn you.
+    subhead: Symbia Key preserves constraints; model calls stay probabilistic but logged and attributable.
+    body: Canon -> Abstraction -> Artifact backs every suggestion with a replayable trace; local-first keeps you in control.
+  level_4:
+    headline: Identity canon + OEP traces for personal assistants.
+    subhead: Symbia Key and reflection logs anchor behavior; stochastic steps stay bounded by epistemic obligations.
+    body: Observer UI and APIs surface identity snapshots, trace segments, and constraint checks per session.
+  level_5:
+    headline: Identity-bound assistants with inspectable epistemics.
+    subhead: GKS-derived Symbia Key, reflection/canon logs, and OEP claims make personal assistants auditable.
+    body: Constraint violations and drift become explicit events; artifacts cite their evidence and lineage.
+
+why_symbia:
+  level_1:
+    headline: Today’s AI forgets and can’t prove its work.
+    subhead: Symbia gives it memory, identity, and receipts.
+    body: Without a record, you can’t trust results. Symbia keeps a steady story you can check.
+  level_2:
+    headline: Stateless AI can’t stay consistent.
+    subhead: Symbia adds continuity and proof so answers don’t drift.
+    body: Agents and prompts reset; Symbia keeps identity and history so you can see why a result changed.
+  level_3:
+    headline: Protocols drop continuity; identity and evidence drift.
+    subhead: Symbia makes identity deterministic and reasoning explicit and explainable.
+    body: Agents/wrappers don’t enforce lineage or epistemics. Symbia keeps canon and traces so behavior stays governable.
+  level_4:
+    headline: Transports aren’t execution; they don’t preserve canon.
+    subhead: Symbia enforces deterministic identity and epistemic contracts across runs and environments.
+    body: No lineage, no governance. Symbia binds identity (GKS) and OEP evidence to every step so execution is auditable.
+  level_5:
+    headline: Protocols aren’t a substrate; they leak continuity.
+    subhead: Symbia provides identity canon + epistemic obligations so stochastic steps remain accountable.
+    body: Without canon, you have opaque hops. Symbia binds GKS/OEP to execution so drift and constraint breaks are observable and replayable.
+
+who_we_are:
+  level_1:
+    headline: We build AI that remembers and can be checked.
+    subhead: Our mission is continuity and proof for everyone.
+    body: We care about making AI trustworthy by keeping its memory and receipts under your control.
+  level_2:
+    headline: We’re the execution layer team.
+    subhead: Our vision is AI that stays coherent, explainable, and governed.
+    body: We value continuity over hype, evidence over guesswork, and local control over black boxes.
+  level_3:
+    headline: Execution layer, not just a protocol.
+    subhead: Deterministic identity (GKS) and explicit epistemics (OEP) keep outcomes governed and auditable.
+    body: We optimize for coherence and accountability, not raw parameter counts.
+  level_4:
+    headline: Identity canon + epistemic contract as a substrate.
+    subhead: We design for governed execution: signed lineage, constrained routing, observable artifacts.
+    body: Principles: continuity > throughput; transparency > opaque convenience; consent as a primitive.
+  level_5:
+    headline: Substrate thinking: identity canon, epistemic obligations, governed artifacts.
+    subhead: We reject “agent wrappers” without lineage or contracts; we build a falsifiable execution layer.
+    body: Values: deterministic identity, auditable epistemics, local-first enforcement, explicit threat and drift models.
+
+what_is_seed:
+  level_1:
+    headline: Symbia Seed is the local version you can run.
+    subhead: It keeps memory and proof on your machine.
+    body: Start it locally, see the dashboard, and watch how work turns into results you can trace.
+  level_2:
+    headline: Symbia Seed runs the execution layer on your laptop.
+    subhead: Identity stays local; every step is logged.
+    body: You get a local UI, logs, and endpoints to see how prompts become outputs.
+  level_3:
+    headline: Symbia Seed is the canonical canon -> abstraction -> artifact runtime.
+    subhead: Local-first, deterministic identity, explicit reasoning, observable endpoints.
+    body: Genesis/Symbia Keys anchor identity; Supervisor + Workers route; Observer UI shows traces.
+  level_4:
+    headline: Local execution layer with GKS lineage and OEP-coded evidence.
+    subhead: Canon/abstraction/artifact runs locally; workers route under policy; traces stay replayable.
+    body: ./scripts/seed.sh start -> API (8123) + UI (9000); identity snapshots, trace SSE, and file/edit endpoints exposed.
+  level_5:
+    headline: Local substrate with GKS fingerprints and OEP obligations.
+    subhead: Canon logs + reflection events, policy-bound routing, artifacts with cited provenance.
+    body: Deterministic writes (fsync), SSE trace stream, identity snapshots, constraint checks, and drift surfaces; transports remain interchangeable.
+
+what_you_can_do:
+  level_1:
+    headline: Start with the free materials or request the full runtime.
+    subhead: Read the guides or try Seed locally with us.
+    body: Choose open guides now; ask for access when you want the full, local experience.
+  level_2:
+    headline: Explore the open specs or run Seed with us.
+    subhead: Learn the ideas, then try the local runtime.
+    body: Use the public docs today; request Seed to see the full flow with logs and UI.
+  level_3:
+    headline: Two paths: open specs and the Seed runtime.
+    subhead: Use OEP/GKS now; request Seed to run the canonical execution layer locally.
+    body: Open source for primitives and governance; Seed for full runtime, observers, and workers.
+  level_4:
+    headline: Open epistemics + identity canon, or the full governed runtime.
+    subhead: Specs are open; Seed delivers the substrate with observability and policy routing.
+    body: Extend OEP/GKS in your stack, or run Seed for supervised workers, traces, and identity enforcement.
+  level_5:
+    headline: Adopt the epistemic/identity contracts, or run the substrate intact.
+    subhead: Specs remain open; Seed provides the full GKS/OEP-bound substrate.
+    body: Fork/extend the specs, or run the canonical runtime with deterministic writes, SSE traces, and identity governance.
+
+docs_api:
+  level_1:
+    headline: Read the docs and see the API.
+    subhead: Browse guides and the live API outline.
+    body: Pick a doc to preview; open the API explorer to see what it can do.
+  level_2:
+    headline: Docs and API in one place.
+    subhead: View public docs and the live API map.
+    body: Use the viewer for docs; open Swagger to see endpoints for health, status, traces, and files.
+  level_3:
+    headline: Docs and API in one place, live.
+    subhead: Docs viewer (docs/docs-index.json) and Swagger (assets/openapi.yaml v0.2).
+    body: Health, status, doc index, trace/event, file/edit, threads; download the spec or open api.html.
+  level_4:
+    headline: Live docs + OpenAPI for the execution layer.
+    subhead: Browse public docs; inspect endpoints for identity, traces, files, and telemetry.
+    body: Swagger reflects v0.2: /health, /status, /event, /trace, /log/stream, /project/file, /edit, /threads/*.
+  level_5:
+    headline: Canonical OpenAPI (v0.2) + docs index for the substrate.
+    subhead: Docs viewer pulls docs/docs-index.json; Swagger serves assets/openapi.yaml.
+    body: SSE trace, deterministic edit/file, identity snapshot, threads, and governance surfaces; transport-agnostic, anchored to local state.
+
+continuity_primitives:
+  level_1:
+    headline: The building blocks that keep AI steady.
+    subhead: Memory, identity, and proof instead of one-off guesses.
+    body: Keep a single source of truth, show receipts, and stay consistent across tools.
+  level_2:
+    headline: Continuity over one-shot prompts.
+    subhead: Identity, history, and explainability baked into the system.
+    body: The person and their goals stay centered; answers stay traceable.
+  level_3:
+    headline: Canon -> Abstraction -> Artifact, grounded in identity.
+    subhead: Deterministic identity holds canon; probabilistic reasoning stays explicit; artifacts ship with lineage.
+    body: Canon, abstraction, artifact; GKS identity; OEP evidence; Observer UI to inspect the path.
+  level_4:
+    headline: Identity canon, epistemic evidence, governed routing.
+    subhead: Canon holds missions with GKS lineage; OEP keeps uncertainty explicit; artifacts remain attributable.
+    body: Genesis/Symbia Key, OEP claims, policy-bound worker fabric, and observer surfaces for replayable traces.
+  level_5:
+    headline: Identity-bound canon + epistemic obligations as primitives.
+    subhead: GKS fingerprints, OEP evidence classes, constrained routing, cited artifacts.
+    body: Canon as ground truth, abstraction as governed computation, artifact as falsifiable output with provenance and drift checks.
+
+early_surfaces_premise:
+  level_1:
+    headline: Simple ways to see and guide your AI.
+    subhead: Your docs, chat, and logs stay connected.
+    body: You don’t lose the thread; the UI shows what happened and why.
+  level_2:
+    headline: Early surfaces to keep continuity visible.
+    subhead: Chat, docs, and logs that remember choices.
+    body: VS Code layout, Observer UI, and ledgers show how work moved forward.
+  level_3:
+    headline: Surfaces that keep canon -> abstraction -> artifact intact.
+    subhead: Canon in ledgers, abstraction routes work, artifacts ship with provenance.
+    body: Symbia-aware layout, Supervisor + Workers, identity/preferences via Symbia Key, Observer UI for traces.
+  level_4:
+    headline: Surfaces over a local substrate: canon, routed work, attributed artifacts.
+    subhead: Canonized assets, OEP-governed worker routing, observable outputs.
+    body: VS Code map + Observer UI; identity and constraints travel with every hop; artifacts cite their lineage.
+  level_5:
+    headline: Surface layer over identity/epistemic substrate.
+    subhead: Canonized assets, policy-bound routing, attributed artifacts with cited evidence.
+    body: Local-first observer + ledgers; constraints and preferences enforced; artifacts remain falsifiable across surfaces.
+
+continuity_pillars:
+  level_1:
+    headline: What we optimize for.
+    subhead: Stay you, stay consistent, stay checkable.
+    body: Identity stays put, steps are explainable, and you can see the trail.
+  level_2:
+    headline: Keep identity steady; keep answers explainable.
+    subhead: Continuity, clarity, and checks built in.
+    body: Personal continuity, structural memory, context discipline, and results that fit your goals.
+  level_3:
+    headline: Deterministic identity + governed probabilistic reasoning.
+    subhead: Identity is deterministic (GKS); reasoning is probabilistic but governed (OEP); everything observable.
+    body: Identity/lineage, evidence/epistemics, governed execution, observability.
+  level_4:
+    headline: Identity canon, epistemic evidence, policy-bound execution, observability.
+    subhead: GKS anchors, OEP claims, Supervisor constraints, trace/telemetry exposure.
+    body: Personal continuity, structural memory, context discipline, beholder-centric evaluation under governance.
+  level_5:
+    headline: Identity canon + epistemic contract + constrained execution + audit surface.
+    subhead: GKS fingerprints, OEP obligations, Supervisor/Workers under policy, replayable traces.
+    body: Stability across tools, explicit uncertainty, constraint enforcement, audit-grade observability.
+
+process:
+  level_1:
+    headline: How Symbia runs.
+    subhead: Start it, log what happens, see the result with proof.
+    body: You boot locally, it records the steps, and you can replay the trail.
+    boot: Start Seed locally; identity anchors at install.
+    canon: Logs capture what happened and why.
+    endpoints: Health, status, trace, and file endpoints are observable.
+    workers: Workers and chat stay within constraints you set.
+  level_2:
+    headline: From start to proof.
+    subhead: Run locally, keep a record, ship with receipts.
+    body: Boot, log actions, watch the stream, and see how the output was made.
+    boot: Start Seed locally; identity anchors at install.
+    canon: Logs capture what happened and why.
+    endpoints: Health, status, trace, and file endpoints are observable.
+    workers: Workers and chat stay within constraints you set.
+  level_3:
+    headline: Trace every step from boot to artifact.
+    subhead: Boot locally, populate canon, run probabilistic steps in abstraction, ship artifacts with lineage.
+    body: ./scripts/seed.sh start -> API/UI; canon + reflection logs; trace SSE; worker hops logged.
+    boot: ./scripts/seed.sh start brings up API (8123) + Observer UI (9000), seeds Genesis/Symbia keys.
+    canon: cognitive-trace.log and reflection events capture missions, edits, and approvals with lineage.
+    endpoints: /health, /status, /event, /trace, /log/stream, /project/file keep the substrate observable.
+    workers: LLMs are interchangeable engines constrained by persona, constraints, and audit trails.
+  level_4:
+    headline: Local boot -> identity canon -> governed routing -> attributed artifacts.
+    subhead: Deterministic start, traceable computation, observable outputs.
+    body: Genesis/Symbia keys seeded at boot; event/trace streams; file/edit endpoints; worker/threads under policy.
+    boot: ./scripts/seed.sh start; identity canon seeded; observers attached.
+    canon: Trace + reflection ledger capture approvals and deltas with lineage.
+    endpoints: /health, /status, /event, /trace, /log/stream, /project/file, /edit, /threads/* observable.
+    workers: Supervisor + Workers under policy; stochastic hops carry OEP evidence.
+  level_5:
+    headline: Deterministic boot, identity-seeded canon, OEP-bound routing, falsifiable artifacts.
+    subhead: Identity genesis, trace/reflection ledger, SSE traces, policy-scoped workers, attributed outputs.
+    body: fsync’d writes, SSE trace/log; /event,/trace,/log/stream,/project/file,/edit,/threads/*; constraint/drift surfaced.
+    boot: Deterministic boot with GKS fingerprints and constraint set; observers bound at start.
+    canon: Canon + reflection logs are the source of truth; violations and drift are explicit events.
+    endpoints: Deterministic edit/file; SSE trace; identity snapshot; threads; governance surfaces; transports remain interchangeable.
+    workers: Workers execute under OEP obligations; constraint violations and drift are surfaced.
+
+developers:
+  level_1:
+    headline: Run it locally and see everything.
+    subhead: Start Seed, open the UI, and watch how it works.
+    body: You get a local dashboard, logs, and a way to see how results were made.
+    seed_summary: Local-first runtime with identity checks, logs, and an Observer UI to inspect it.
+    seed_boot: Start it locally and see the dashboard on your machine.
+    missions: Log your work, see the trace, and view it in the UI.
+    docs: See the docs for how Symbia keeps continuity.
+  level_2:
+    headline: A local, observable AI runtime.
+    subhead: Start Seed, check the endpoints, and follow the trail.
+    body: Boot, hit health/status/trace, and watch the UI stream what’s happening.
+    seed_summary: Local-first runtime with identity checks, logs, and an Observer UI to inspect it.
+    seed_boot: Boot and open 127.0.0.1 to see status and traces.
+    missions: Log your work, see the trace, and view it in the UI.
+    docs: See the docs for how Symbia keeps continuity.
+  level_3:
+    headline: Build on a local, observable execution layer.
+    subhead: Deterministic identity + probabilistic epistemics, all observable.
+    body: ./scripts/seed.sh start -> 8123/9000; /event,/trace,/log/stream,/project/file,/edit,/threads/*; missions map canon -> artifact.
+    seed_summary: Local-first runtime with Genesis Key verification, cognitive trace telemetry, Supervisor + Workers fabric, and Observer UI/docs/logs viewers with outside-in prioritization.
+    seed_boot: Boot: ./scripts/seed.sh start -> http://127.0.0.1:8123 (API) + 9000 (Observer UI).
+    missions: Use /event and /trace to append canon entries; /log/stream for SSE; /project/file and /edit for deterministic edits; /threads/* for sessioned work. Missions map canon -> abstraction -> artifact.
+    docs: OEP/GKS, Seed Supervisor, worker fabric, logging subsystem, identity graph, and consent model. Threat models, consent model, and portability guides keep contributions aligned.
+  level_4:
+    headline: Local execution layer with identity canon and trace SSE.
+    subhead: Supervisor + Workers under policy; observable file/edit/thread surfaces.
+    body: Genesis verification, trace telemetry, /event,/trace,/log/stream,/project/file,/edit,/threads/*; outside-in observer lanes.
+    seed_summary: Local-first runtime with Genesis verification, trace telemetry, Supervisor + Workers fabric, and Observer UI/docs/logs viewers.
+    seed_boot: ./scripts/seed.sh start -> 8123/9000; identity seeded; observers attached.
+    missions: /event,/trace,/log/stream,/project/file,/edit,/threads/* under policy; missions map canon -> artifact.
+    docs: OEP/GKS, supervisor/worker fabric, logging, identity graph, consent/threat models; portability guides.
+  level_5:
+    headline: Identity-governed substrate with deterministic writes and SSE traces.
+    subhead: GKS fingerprints, OEP evidence, constrained workers, and falsifiable artifacts.
+    body: fsync’d logs, identity snapshots, SSE trace, deterministic edit/file, threads per mission; constraint/drift events exposed.
+    seed_summary: Identity-governed substrate with deterministic writes, GKS fingerprints, OEP evidence, and observer surfaces.
+    seed_boot: Deterministic boot; identity snapshots available; SSE trace and deterministic edit/file.
+    missions: Canon/trace/threads under policy; constraint and drift events surfaced; artifacts are falsifiable.
+    docs: Governance, threat, consent, identity portability, and logging/worker fabrics documented for audit-grade use.
+
+under_the_hood:
+  level_1:
+    headline: What’s inside.
+    subhead: Rules and records that keep AI honest.
+    body: We keep a standard for evidence, a journal of steps, and safeguards for identity.
+  level_2:
+    headline: The pieces that keep continuity.
+    subhead: A shared standard for evidence, traces, and identity guards.
+    body: Open protocol for claims, logs you can read, and protections against drift.
+  level_3:
+    headline: Structured primitives that preserve continuity.
+    subhead: OEP, traces, continuity, and identity keep intent and evidence intact.
+    body: Open Epistemic Protocol, cognitive traces, continuity model, drift-resistant identity, canon/abstraction/artifact substrate.
+  level_4:
+    headline: Evidence protocol, trace ledger, continuity model, identity safeguards.
+    subhead: OEP claims, replayable traces, continuity semantics, GKS-backed identity.
+    body: Canon/abstraction/artifact substrate, beholder model for input structuring, consent and governance enforced locally.
+  level_5:
+    headline: Epistemic contract + trace ledger + continuity semantics + identity canon.
+    subhead: OEP obligation classes, replayable traces, continuity model, GKS fingerprints.
+    body: Canon/abstraction/artifact, beholder/identity models, drift-resistant identity, consent/audit primitives; falsifiability over transports.
+
+credibility:
+  level_1:
+    headline: Proof it’s real.
+    subhead: Live docs, API, and traces you can see.
+    body: You can open the docs and API map and see real example traces.
+    swagger: Same API you open in the browser; shows health, status, and file/trace access.
+    trace: Trace sample shows time, what happened, and who did it.
+  level_2:
+    headline: Live API, docs, and traces.
+    subhead: See the running system, not a mock.
+    body: Open docs and Swagger; review trace snippets to see how missions are logged.
+    swagger: Open API explorer (v0.2) for health, status, doc index, trace/event, file/edit.
+    trace: Trace sample follows the published trace schema with timestamped events.
+  level_3:
+    headline: Real artifacts, not mockups.
+    subhead: Swagger (v0.2), docs viewer, trace excerpts, and demo flows are live.
+    body: Open api.html, download assets/openapi.yaml, view docs via docs/docs-index.json, and inspect trace samples.
+    swagger: OpenAPI v0.2 covering /health, /status, /event, /trace, /log/stream, /project/file, /edit, /threads/*.
+    trace: Trace excerpt aligns to docs/architecture/cognitive-trace-schema.md with mission and edit events.
+  level_4:
+    headline: Live spec + trace + demo flows for the substrate.
+    subhead: OpenAPI v0.2, docs index, trace SSE/logs, and flows from boot to artifact.
+    body: Swagger reflects the running runtime; traces and demo flows show canon->artifact in practice.
+    swagger: OpenAPI v0.2 with SSE trace/log, deterministic edit/file, threads; download or browse via api.html.
+    trace: Canon/trace sample with mission/edit events, timestamps, and persona/worker metadata.
+  level_5:
+    headline: Canonical evidence: OpenAPI, trace, obligations, flows.
+    subhead: Specs and traces are falsifiable; obligations surfaced for epistemic scrutiny.
+    body: Swagger v0.2, trace excerpt, demo flows, and OEP obligations envelope expose assumptions and constraints.
+    swagger: OpenAPI v0.2 for identity snapshot, SSE trace/log, deterministic edit/file, threads; transport-agnostic, local state anchored.
+    trace: Trace sample shows mission/edit with GKS/OEP metadata; obligations envelope example for epistemic guardrails.
