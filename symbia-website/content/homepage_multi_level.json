@@ -1,0 +1,248 @@
+{
+  "hero": {
+    "level_1": {
+      "headline": "Governed execution for automation and autonomy.",
+      "subhead": "Delegate work to software agents without losing control or visibility.",
+      "supporting": "Every action runs inside boundaries with declared uncertainty, provenance, and constraints."
+    },
+    "level_2": {
+      "headline": "A governed execution layer that keeps automation observable and safe.",
+      "subhead": "Identity, policy, and traceability are required before agents act.",
+      "supporting": "Allowed surfaces are explicit; uncertainty and provenance travel with each step."
+    },
+    "level_3": {
+      "headline": "Execution layer for accountable automation.",
+      "subhead": "Agents run only on permitted surfaces with identity, policy, and audit traces attached.",
+      "supporting": "Uncertainty, provenance, and constraints are declared before execution."
+    },
+    "level_4": {
+      "headline": "Governed execution with signed identity and declared epistemics.",
+      "subhead": "Bounded surfaces, time, and authority gate automation; traces stay replayable.",
+      "supporting": "Probabilistic reasoning stays attached to execution with provenance and limits."
+    },
+    "level_5": {
+      "headline": "Deterministic identity, bounded epistemics, enforced surfaces.",
+      "subhead": "Signed identity and policy precede each run; uncertainty stays explicit and auditable.",
+      "supporting": "Execution is scoped by time, authority, and surfaces; evidence survives beyond runtime."
+    }
+  },
+  "what_you_can_do": {
+    "level_1": {
+      "headline": "Start with specs or request runtime.",
+      "subhead": "Read the open materials or run Seed with us.",
+      "body": "Use the guides now. Request Seed to run governed execution locally."
+    },
+    "level_2": {
+      "headline": "Two entry points.",
+      "subhead": "Open specs show the rules. Seed runs them locally.",
+      "body": "Adopt schemas at your pace. Ask for Seed when you want the full runtime."
+    },
+    "level_3": {
+      "headline": "Open specs and the Seed runtime.",
+      "subhead": "Identity, policy, and traces stay open. Seed enforces them as a runtime.",
+      "body": "Use the schemas today. Request Seed to run governed pipelines locally."
+    },
+    "level_4": {
+      "headline": "Governance specs or the full runtime.",
+      "subhead": "Schemas define identity and policy. Seed executes under those constraints.",
+      "body": "Extend the specs in your stack or run Seed for the canonical execution substrate."
+    },
+    "level_5": {
+      "headline": "Specs for identity and epistemics; runtime for enforcement.",
+      "subhead": "GKS/OEP schemas stay open. Seed enforces them with bounded pipelines.",
+      "body": "Integrate the specs or run Seed with signed identity, policy, and trace invariants."
+    }
+  },
+  "docs_api": {
+    "level_1": {
+      "headline": "Docs and API in one place.",
+      "subhead": "Browse guides and live endpoints.",
+      "body": "Open Swagger for health, status, trace, and file surfaces."
+    },
+    "level_2": {
+      "headline": "Docs + live API.",
+      "subhead": "See the governed execution endpoints.",
+      "body": "Health, status, doc index, trace, log stream, file/edit, threads."
+    },
+    "level_3": {
+      "headline": "Docs + OpenAPI for the runtime.",
+      "subhead": "Live explorer for health, status, trace, file/edit, threads.",
+      "body": "Open api.html or download assets/openapi.yaml."
+    },
+    "level_4": {
+      "headline": "Live API map for the execution layer.",
+      "subhead": "Identity snapshot, trace/log stream, deterministic edit/file, threads.",
+      "body": "Swagger reflects the running runtime; docs viewer pulls docs-index.json."
+    },
+    "level_5": {
+      "headline": "Canonical OpenAPI for governed execution.",
+      "subhead": "Endpoints expose health, status, identity, trace, log stream, file/edit, threads.",
+      "body": "Transport-agnostic surfaces anchored to local state."
+    }
+  },
+  "early_surfaces_premise": {
+    "level_1": {
+      "headline": "Substrate from intent to artifact.",
+      "subhead": "Bounded pipelines keep work governed.",
+      "body": "Identity and policy gate actions. Observers expose traces and outputs."
+    },
+    "level_2": {
+      "headline": "Governed substrate, local-first.",
+      "subhead": "Canon, pipelines, and artifacts stay linked.",
+      "body": "Policy decides what may run. Observers show traces and lineage."
+    },
+    "level_3": {
+      "headline": "Canon -> pipeline -> artifact under policy.",
+      "subhead": "Execution pipelines coordinate tools; policy gates surfaces.",
+      "body": "Identity seeds canon. Pipelines stay bounded. Artifacts carry lineage."
+    },
+    "level_4": {
+      "headline": "Bounded pipelines on a local substrate.",
+      "subhead": "Identity canon, policy routing, attributed artifacts.",
+      "body": "Canon holds missions. Pipelines enforce surfaces, time, and authority. Artifacts surface traces."
+    },
+    "level_5": {
+      "headline": "Identity-seeded canon, policy-bound routing, attributed artifacts.",
+      "subhead": "Deterministic canon plus governed pipelines; artifacts stay replayable.",
+      "body": "Constraints bind before execution. Observers expose lineage across surfaces."
+    }
+  },
+  "continuity_pillars": {
+    "level_1": {
+      "headline": "Identity, evidence, governance, observability.",
+      "subhead": "Keep who, why, and how intact.",
+      "body": "Identity binds actions. Evidence stays explicit. Execution is governed. Traces stay visible."
+    },
+    "level_2": {
+      "headline": "Bound identity. Explicit evidence. Governed execution. Clear traces.",
+      "subhead": "Continuity and audit over guesswork.",
+      "body": "Identity and policy precede actions. Uncertainty is declared. Every step is traceable."
+    },
+    "level_3": {
+      "headline": "Identity canon, epistemic evidence, constrained execution, audit surfaces.",
+      "subhead": "Deterministic identity; probabilistic reasoning stays bounded.",
+      "body": "Canon holds missions. OEP binds claims. Pipelines enforce constraints. Traces remain replayable."
+    },
+    "level_4": {
+      "headline": "GKS identity, OEP evidence, policy gates, observable artifacts.",
+      "subhead": "Execution stays governed before any tool call.",
+      "body": "Identity fingerprints seed policy. Obligations travel with actions. Artifacts cite lineage."
+    },
+    "level_5": {
+      "headline": "Identity invariants, epistemic obligations, enforced pipelines, audit-grade observability.",
+      "subhead": "Boundaries, provenance, and limits declared before execution.",
+      "body": "Genesis keys set identity. OEP envelopes declare uncertainty. Pipelines enforce surfaces, time, and authority. Traces remain falsifiable."
+    }
+  },
+  "credibility": {
+    "level_1": {
+      "headline": "Proof it runs.",
+      "subhead": "Live docs and API.",
+      "body": "Open Swagger and see real traces.",
+      "swagger": "Health, status, trace, file surfaces.",
+      "trace": "Sample trace shows ordered actions with identity."
+    },
+    "level_2": {
+      "headline": "Live specs and traces.",
+      "subhead": "No mock data.",
+      "body": "Swagger, docs viewer, trace excerpt, and demo flows are live.",
+      "swagger": "OpenAPI v0.2 for health, status, trace, file/edit, threads.",
+      "trace": "Trace follows the published schema with timestamps and actors."
+    },
+    "level_3": {
+      "headline": "Evidence: OpenAPI, docs, traces, flows.",
+      "subhead": "Runtime is observable.",
+      "body": "Open api.html, download assets/openapi.yaml, review the trace snippet.",
+      "swagger": "OpenAPI v0.2 covers identity snapshot, trace/log stream, deterministic file/edit, threads.",
+      "trace": "Trace excerpt shows mission and edit events with policy metadata."
+    },
+    "level_4": {
+      "headline": "Runtime artifacts, not slides.",
+      "subhead": "Specs and traces are live.",
+      "body": "Swagger and docs map to the running runtime; trace excerpt shows governed execution.",
+      "swagger": "OpenAPI v0.2 with identity snapshot, SSE trace/log, deterministic edit/file, threads.",
+      "trace": "Trace sample lists mission and edit events with identities and bounds."
+    },
+    "level_5": {
+      "headline": "Falsifiable evidence: spec, trace, obligations.",
+      "subhead": "Specs and traces are audit-ready.",
+      "body": "OpenAPI, trace excerpt, and obligations envelope expose constraints.",
+      "swagger": "OpenAPI v0.2: identity snapshot, SSE trace/log, deterministic edit/file, threads; anchored to local state.",
+      "trace": "Trace sample shows mission and edit events with identity, policy, and uncertainty metadata."
+    }
+  },
+  "developers": {
+    "level_1": {
+      "headline": "Run it locally and see every step.",
+      "subhead": "Start Seed and watch execution.",
+      "body": "Open the dashboard to see actions and traces.",
+      "seed_summary": "Local-first runtime with identity checks and observable traces.",
+      "seed_boot": "Start it locally and open the dashboard.",
+      "missions": "Log work, see the trace, and view it in the UI.",
+      "docs": "Read how governed execution works."
+    },
+    "level_2": {
+      "headline": "Local governed runtime.",
+      "subhead": "Start Seed, hit endpoints, watch traces.",
+      "body": "Boot, check health/status/trace, and observe the UI stream actions.",
+      "seed_summary": "Local-first runtime with identity checks and observable traces.",
+      "seed_boot": "Boot and open 127.0.0.1 to see status and traces.",
+      "missions": "Log work, see the trace, and view it in the UI.",
+      "docs": "Docs cover identity, policy, and trace surfaces."
+    },
+    "level_3": {
+      "headline": "Build on a governed execution layer.",
+      "subhead": "Deterministic identity plus observable pipelines.",
+      "body": "./scripts/seed.sh start -> 8123/9000; endpoints for health, status, trace, log stream, file/edit, threads.",
+      "seed_summary": "Local runtime with Genesis verification, supervised workers, and observer surfaces.",
+      "seed_boot": "Boot: ./scripts/seed.sh start -> http://127.0.0.1:8123 and 9000.",
+      "missions": "Use /event and /trace to append canon; /log/stream for SSE; /project/file and /edit for deterministic edits; /threads/* for sessioned work.",
+      "docs": "Docs cover policy gates, identity canon, and trace schema."
+    },
+    "level_4": {
+      "headline": "Local execution layer with policy-bound pipelines.",
+      "subhead": "Supervisor and workers run under constraints; traces stay live.",
+      "body": "Genesis verification, trace telemetry, /event, /trace, /log/stream, /project/file, /edit, /threads/*; observers attached.",
+      "seed_summary": "Local runtime with identity canon, policy routing, and observer surfaces.",
+      "seed_boot": "./scripts/seed.sh start -> 8123/9000; identity seeded; observers attached.",
+      "missions": "/event, /trace, /log/stream, /project/file, /edit, /threads/* under policy; missions map canon to artifact.",
+      "docs": "Docs detail GKS/OEP, supervisor fabric, logging, and consent model."
+    },
+    "level_5": {
+      "headline": "Identity-governed substrate with deterministic writes.",
+      "subhead": "GKS fingerprints, OEP evidence, constrained workers, and falsifiable artifacts.",
+      "body": "fsync'd logs, identity snapshots, SSE trace, deterministic edit/file, threads per mission; constraint and drift events exposed.",
+      "seed_summary": "Identity-governed substrate with deterministic writes and observer surfaces.",
+      "seed_boot": "Deterministic boot; identity snapshots available; SSE trace and deterministic edit/file.",
+      "missions": "Canon, trace, and threads run under policy; constraint and drift events surface; artifacts stay falsifiable.",
+      "docs": "Docs cover governance, consent, identity invariants, and logging/worker fabrics."
+    }
+  },
+  "under_the_hood": {
+    "level_1": {
+      "headline": "What is inside.",
+      "subhead": "Evidence, traces, and identity guards.",
+      "body": "Standard for claims. Trace ledger. Safeguards for identity."
+    },
+    "level_2": {
+      "headline": "Pieces of the execution layer.",
+      "subhead": "Evidence format, trace ledger, identity canon.",
+      "body": "Open spec for claims. Replayable traces. Identity that resists drift."
+    },
+    "level_3": {
+      "headline": "Structured primitives for governed execution.",
+      "subhead": "OEP claims, trace ledger, continuity, identity canon.",
+      "body": "Canon/abstraction/artifact substrate with replayable traces."
+    },
+    "level_4": {
+      "headline": "Epistemic contract, trace ledger, continuity model, GKS identity.",
+      "subhead": "Obligations and provenance attach to every action.",
+      "body": "Canonical substrate; consent and governance enforced locally."
+    },
+    "level_5": {
+      "headline": "Epistemic obligations + trace ledger + continuity semantics + identity invariants.",
+      "subhead": "Evidence and bounds stay explicit before execution.",
+      "body": "Canon/abstraction/artifact substrate; constraints and lineage remain auditable."
+    }
+  }
+}

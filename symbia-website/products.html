@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbia Labs | Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="header-row">
+      <a class="brand brand-link" href="index.html">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="brandline">Governed execution</p>
+        </div>
+      </a>
+    </div>
+    <nav class="nav-links nav-primary" aria-label="Primary">
+      <a href="research.html">Research</a>
+      <a href="open-source.html">Open Source</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>Products for governed agent execution.</h1>
+            <p class="lede">From the Seed runtime to observer surfaces, everything is built to keep automation observable, auditable, and safe.</p>
+            <div class="pill-row">
+              <span class="chip">Seed runtime</span>
+              <span class="chip">Observer UI</span>
+              <span class="chip">APIs</span>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="panel-head">
+              <p class="eyebrow">Availability</p>
+              <p class="muted">Runtime by access; specs and docs are open.</p>
+            </div>
+            <div class="fact-list">
+              <div class="fact">
+                <p class="label">Seed</p>
+                <p class="value">Local-first governed execution with bounded pipelines.</p>
+              </div>
+              <div class="fact">
+                <p class="label">Observer</p>
+                <p class="value">Trace, status, and artifact views with lineage.</p>
+              </div>
+              <div class="fact">
+                <p class="label">API</p>
+                <p class="value">Health, status, trace, file/edit, threads endpoints.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Product lineup</p>
+        <h2>What you can run</h2>
+        <p class="section-lede">Execution-first components with governance and audit built in.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <p class="label">Symbia Seed</p>
+          <p>Local-first governed execution runtime with policy-bound pipelines and traceable outputs.</p>
+        </article>
+        <article class="card">
+          <p class="label">Observer UI</p>
+          <p>Outside-in observability for missions, traces, identity snapshots, and artifact lineage.</p>
+        </article>
+        <article class="card">
+          <p class="label">API surfaces</p>
+          <p>Endpoints for health, status, trace/log stream, deterministic file/edit, and threads.</p>
+        </article>
+        <article class="card">
+          <p class="label">Identity + epistemics</p>
+          <p>Genesis/Symbia Key and OEP envelopes to bind identity, provenance, and uncertainty to every action.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Access</p>
+        <h2>Request the runtime</h2>
+        <p class="section-lede">We grant access to teams deploying agentic systems where safety and accountability matter.</p>
+      </div>
+      <div class="cta-card">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h3>Get Seed and Observer</h3>
+          <p class="section-lede">Includes setup scripts, OpenAPI spec, and observer surfaces.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="mailto:hello@symbia-labs.com">Request access</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo small">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="muted">Local-first · Inspectable · Audit-ready</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#primitives">Positioning</a>
+        <a href="index.html#developers">Developers</a>
+        <a href="mailto:hello@symbia-labs.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="muted small">Symbia Labs builds governed execution for agentic systems. No cookies by default.</p>
+    </div>
+  </footer>
+
+  <script src="bg.js"></script>
+  <script src="scripts/privacy.js"></script>
+</body>
+</html>
