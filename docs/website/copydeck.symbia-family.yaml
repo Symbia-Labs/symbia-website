@@ -1,0 +1,173 @@
+style_rules:
+  - "Short declarative sentences."
+  - "Noun-heavy; bind claims to execution and evidence."
+  - "Automation and autonomy are governed outcomes, not free agents."
+  - "Uncertainty, provenance, and limits travel with every action."
+  - "Never anthropomorphize models or protocols."
+  - "Execution-first; protocols are connective tissue, not the story."
+
+banned_phrases:
+  - "A Better AI"
+  - "the AI decides"
+  - "the system acts"
+  - "autonomous intelligence without constraints"
+  - "Deterministic identity. Probabilistic reasoning. Execution layer."
+  - "breakthrough"
+  - "magic"
+  - "black box"
+
+per_persona_levels:
+  level_1: "Plain language. No acronyms."
+  level_2: "Light governance terms; still no acronyms."
+  level_3: "Introduce policy, identity, and trace surfaces."
+  level_4: "Add GKS/OEP references and boundary language."
+  level_5: "Include invariants, envelopes, and audit phrasing."
+
+per_section_copy:
+  hero:
+    headline: "A governed execution layer that makes automation and autonomy observable, auditable, and safe."
+    lede:
+      - "Delegate work to software agents without surrendering control, accountability, or visibility."
+      - "Every action runs inside explicit boundaries and carries its uncertainty, provenance, and constraints."
+    chips:
+      - "Governed execution"
+      - "Observable autonomy"
+      - "Accountable automation"
+    primary_cta: "Try it out"
+    secondary_cta: "Read the Docs"
+
+  what_symbia_is:
+    title: "What is Symbia?"
+    bullets:
+      - "Symbia is an execution-layer doctrine for agentic systems."
+      - "It governs how software agents act, not how models predict."
+      - "Protocols connect components. Models produce probabilities."
+      - "Symbia defines what is allowed to run, where, and under whose responsibility."
+
+  what_symbia_is_not:
+    title: "What Symbia is not"
+    bullets:
+      - "Not a model."
+      - "Not a chatbot."
+      - "Not a protocol."
+      - "Not an autonomous system that replaces human responsibility."
+
+  symbia_seed:
+    title: "Symbia Seed"
+    lede:
+      - "Symbia Seed is a local-first, governed execution runtime."
+      - "It spawns, constrains, and retires software agents. Nothing executes without identity, policy, and traceability."
+    bullets:
+      - "Agents operate independently within signed limits."
+      - "APIs, tools, files, and networks stay allowlisted."
+      - "Every step records provenance, constraints, and uncertainty."
+      - "Lifecycle stays under policy from spawn to retire."
+    cta: "Try it out"
+
+  epistemic_layer:
+    title: "Probabilistic reasoning, governed"
+    lede: "Symbia does not eliminate uncertainty. It makes uncertainty explicit, bounded, and accountable."
+    bullets:
+      - "Probabilistic reasoning is attached to execution."
+      - "Confidence, provenance, and limits travel with every decision."
+      - "Uncertainty is declared before actions run."
+      - "Evidence remains audit-ready after runtime."
+
+  origin_gap:
+    title: "Why Symbia"
+    gap: "Ungoverned execution is risk."
+    gap_points:
+      - "Actions run without boundaries. Uncertainty hides. Responsibility blurs."
+      - "Autonomy without enforcement creates liability."
+    solution: "Governed execution"
+    solution_points:
+      - "Boundaries and policy precede action."
+      - "Identity and accountability bind to every step."
+      - "Uncertainty is declared and carried forward."
+      - "Surfaces, time, and authority stay scoped."
+      - "Auditable traces remain after execution."
+
+  governance_and_safety:
+    title: "Governed execution"
+    lede:
+      - "Safety is enforced before execution, not inferred after."
+      - "Capabilities are scoped. Time, authority, and surfaces are bounded. Classes of failures are prevented, not merely logged."
+    pillars:
+      - "Define what may run; actions require identity, policy, and constraints."
+      - "Stop unsafe work early by bounding time, authority, and surfaces."
+      - "Prevent, then log; block disallowed work and record permitted actions with proofs."
+
+  execution_surfaces:
+    title: "Where agents are allowed to act"
+    bullets:
+      - "Agents do not act everywhere."
+      - "They act on defined execution surfaces: APIs, tools, files, networks."
+      - "Each surface is explicitly permitted or denied."
+      - "Safety begins with where execution is allowed to occur."
+
+  actors_and_pipelines:
+    title: "Bounded actors. Constrained pipelines."
+    bullets:
+      - "Work is performed by bounded software actors."
+      - "Actions flow through constrained pipelines."
+      - "Automation is a pipeline executing without manual intervention."
+      - "Autonomy is permission granted within enforced limits."
+
+  open_source:
+    title: "Two paths: open specs and the Seed runtime."
+    subhead: "Open specs show the rules. Seed runs them locally."
+    use_cases:
+      - "Study the governance patterns for agentic systems."
+      - "Adopt identity and policy schemas for execution control."
+      - "Use the specs to keep provenance and uncertainty explicit."
+      - "Extend observers that emit structured, auditable traces."
+    seed_use_cases:
+      - "Run a local-first governed execution runtime."
+      - "Spawn, constrain, and retire agents inside signed limits."
+      - "Allow execution only on permitted surfaces."
+      - "Keep traces, policy, and uncertainty bound to every action."
+
+  execution_layer_positioning:
+    title: "Where Symbia fits"
+    lede:
+      - "Above models and protocols. Below applications and interfaces."
+      - "Symbia governs execution, not cognition or transport."
+    bullets:
+      - "Above models. Symbia does not shape predictions."
+      - "Above protocols. Symbia does not move packets."
+      - "Below applications. It governs what runs before interfaces act."
+      - "Execution is the focus. Cognition and transport stay separate."
+
+  observability_and_audit:
+    title: "Evidence from every action"
+    lede:
+      - "Every action produces structured traces."
+      - "Execution is ordered, attributable, and replayable. Auditable evidence survives beyond runtime."
+    timeline:
+      - "Each step records who acted, what ran, and under which limits."
+      - "Execution is ordered and replayable for review."
+      - "Identity and policy bind to every action and artifact."
+      - "Evidence persists so outcomes can be explained to humans and institutions."
+
+  call_to_action:
+    title: "Build with governed automation"
+    body:
+      - "Symbia is for teams deploying agentic systems where failure, liability, and trust matter."
+    primary_cta: "Try it out"
+    secondary_cta: "Explore Documentation"
+
+  press_statement:
+    headline: "Execution-layer story in one place."
+    statement: "Symbia is a governed execution layer for agentic systems. It makes automation and autonomy observable, auditable, and safe. Identity, policy, and uncertainty bind to every action."
+    qa:
+      - "What Symbia governs: execution, not prediction."
+      - "How autonomy stays bounded: scoped time, authority, and surfaces."
+      - "Why uncertainty is explicit: evidence and limits travel with actions."
+      - "Where Seed fits: local-first runtime that enforces these rules."
+
+  removals:
+    - "A Better AI"
+    - "Deterministic identity. Probabilistic reasoning. Execution layer."
+    - "Any sentence implying the AI decides"
+    - "Any sentence implying the system acts"
+    - "Autonomous intelligence without constraints"

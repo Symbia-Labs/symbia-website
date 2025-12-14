@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbia Seed Alpha-2 Access &amp; Testing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="seed-page">
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="header-row">
+      <a class="brand brand-link" href="index.html">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="brandline">Governed execution</p>
+        </div>
+      </a>
+      <div class="level-switcher" aria-label="Technical familiarity level">
+        <label for="level-pill-1">Level</label>
+        <button class="level-pill" id="level-pill-1" data-level="1" type="button"><span class="icon">🌱</span>1</button>
+        <button class="level-pill" data-level="2" type="button"><span class="icon">🧭</span>2</button>
+        <button class="level-pill" data-level="3" type="button"><span class="icon">🛠️</span>3</button>
+        <button class="level-pill" data-level="4" type="button"><span class="icon">🛰️</span>4</button>
+        <button class="level-pill" data-level="5" type="button"><span class="icon">🧬</span>5</button>
+      </div>
+    </div>
+    <nav class="nav-links nav-primary" aria-label="Primary">
+      <a href="research.html">Research</a>
+      <a href="open-source.html">Open Source</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="seed-container">
+        <div class="hero-shell">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Symbia Seed</p>
+              <h1>Alpha-2 Access &amp; Testing</h1>
+              <p class="lede">Guided, auditable mission to validate execution-layer posture: identity, auth, default-deny, scoped authz, governed egress, traceability, continuity.</p>
+              <div class="pill-row">
+                <span class="chip">Alpha-2 missionctl</span>
+                <span class="chip">Version 2025-12-13.A</span>
+                <span class="chip">Receipts-first</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Start here</p>
+          <h2>Run Alpha-2 locally</h2>
+          <p class="section-lede">Install, boot the dev seed, then run the guided mission.</p>
+        </div>
+        <div class="seed-grid seed-grid-3">
+          <article class="seed-card emphasis">
+            <p class="label">1. Install</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-alpha2-early-access/main/install-alpha2.sh | bash</pre></div>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">2. Run</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>symbia boot dev</pre></div>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">3. Test</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>alpha-2 missionctl</pre></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Executive summary</p>
+          <h2>What Alpha-2 is</h2>
+          <p class="section-lede">A guided, auditable mission proving the runtime can say “no” reliably, say “yes” narrowly, and leave receipts either way.</p>
+        </div>
+        <div class="seed-grid seed-grid-3">
+          <article class="seed-card"><p>Stable install identity and origin time.</p></article>
+          <article class="seed-card"><p>Authenticated actor surfaces; default-deny privileged tools.</p></article>
+          <article class="seed-card"><p>Scoped authorization per capability.</p></article>
+          <article class="seed-card"><p>Governed network egress (private IPs blocked, allowlisted hosts accepted).</p></article>
+          <article class="seed-card"><p>Durable records (logs + reflection stream) for audit.</p></article>
+          <article class="seed-card"><p>Continuity semantics: state pointer, stable identity across calls.</p></article>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card">
+            <p class="label">Out of scope (by design)</p>
+            <ul class="seed-list">
+              <li>No claim about model correctness or general safety.</li>
+              <li>Not a full isolation or key-hardening proof.</li>
+              <li>Does not prove queued requests were executed—only accepted/denied and recorded.</li>
+              <li>No performance, load, or fuzz testing.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Threat model</p>
+          <h2>What these tests defend against</h2>
+        </div>
+        <div class="seed-grid seed-grid-3">
+          <article class="seed-card emphasis"><p>Unauthenticated tool execution.</p></article>
+          <article class="seed-card emphasis"><p>Privilege escalation via spoofed actors/headers.</p></article>
+          <article class="seed-card emphasis"><p>Silent side effects (no durable records).</p></article>
+          <article class="seed-card emphasis"><p>Network exfil / SSRF to private/internal targets.</p></article>
+          <article class="seed-card emphasis"><p>State ambiguity (no stable install identity).</p></article>
+          <article class="seed-card emphasis"><p>No receipts (missing trace/queue evidence).</p></article>
+        </div>
+        <p class="muted">Not a claim to defeat a fully compromised host; establishes minimum governable controls.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Quick start</p>
+          <h2>Install, verify, run</h2>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card emphasis">
+            <p class="label">Install (no git clone)</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-alpha2-early-access/main/install-alpha2.sh | bash</pre></div>
+            <p class="muted small">Installs to <code>~/.symbia-seed-dist</code>; shims in <code>~/bin</code> (<code>symbia</code>, <code>alpha-2</code>).</p>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Integrity checks</p>
+            <ul class="seed-list">
+              <li>SHA256 required; installer aborts if missing/mismatched.</li>
+              <li>Tarballs cosign-signed (GitHub OIDC).</li>
+            </ul>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>cosign verify-blob --certificate &lt;tar.gz&gt;.crt --signature &lt;tar.gz&gt;.sig \
+certificate-identity-regexp "https://github.com/Symbia-Labs/symbia-seed/.*" \
+certificate-oidc-issuer https://token.actions.githubusercontent.com &lt;tar.gz&gt;</pre></div>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Run commands</p>
+            <ul class="seed-list">
+              <li><code>symbia boot dev</code></li>
+              <li><code>alpha-2 missionctl</code> (15s wait for endpoints)</li>
+              <li>Run steps 1→7 in order (Step 6 expects prior steps).</li>
+            </ul>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Notes</p>
+            <ul class="seed-list">
+              <li><code>missionctl</code> waits for API healthy before steps.</li>
+              <li>State dir: <code>~/.symbia-seed-alpha2</code>; pointer: <code>~/.symbia-seed-current</code></li>
+              <li>Logs: <code>${STATE_DIR}/logs/symbia-seed.api.log</code></li>
+              <li>Traces: <code>${STATE_DIR}/logs/reflection/events.ndjson</code></li>
+              <li>Demo token: <code>${STATE_DIR}/auth/demo.token</code> (chmod 600)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">missionctl behavior</p>
+          <h2>How to read results</h2>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card">
+            <p class="label">Narration + evidence</p>
+            <p><code>missionctl</code> narrates and orchestrates. <code>pytest</code> owns pass/fail. Logs + queue files + reflection stream provide independent evidence.</p>
+          </article>
+          <article class="seed-card">
+            <p class="label">Operator/auditor views</p>
+            <ul class="seed-list">
+              <li>API log: <code>~/.symbia-seed/logs/symbia-seed.api.log</code></li>
+              <li>FS queue: <code>~/.symbia-seed/logs/internal/fs-requests.ndjson</code></li>
+              <li>HTTP queue: <code>~/.symbia-seed/logs/internal/http-requests.ndjson</code></li>
+              <li>Reflection log: <code>~/.symbia-seed/logs/reflection/events.ndjson</code></li>
+              <li>State pointer: <code>~/.symbia-seed-current</code></li>
+            </ul>
+          </article>
+          <article class="seed-card">
+            <p class="label">Watch commands</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>tail -f ~/.symbia-seed/logs/symbia-seed.api.log
+tail -f ~/.symbia-seed/logs/internal/fs-requests.ndjson
+tail -f ~/.symbia-seed/logs/internal/http-requests.ndjson
+tail -f ~/.symbia-seed/logs/reflection/events.ndjson</pre></div>
+          </article>
+          <article class="seed-card">
+            <p class="label">Remote observation</p>
+            <p>SSH port-forward: <code>ssh -L 19123:127.0.0.1:19123 user@host</code></p>
+            <p>Then: <code>curl -s http://127.0.0.1:19123/health</code>, <code>/status</code></p>
+          </article>
+          <article class="seed-card">
+            <p class="label">Security note</p>
+            <p>Do not paste bearer tokens. Share paths/evidence files, not secrets.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="alpha2-steps">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Test suite</p>
+          <h2>Alpha-2 missionctl steps (1–7)</h2>
+        </div>
+        <div class="seed-grid seed-grid-3">
+          <article class="seed-card" data-step="1">
+            <p class="label">Step 1 — Boot + Identity</p>
+            <p>Call /health and /status; expect status 200, version alpha2-…, install.id and t0_iso present.</p>
+            <p class="muted small">Reachable runtime with stable install identity.</p>
+          </article>
+          <article class="seed-card deny" data-step="2">
+            <p class="label">Step 2 — Filesystem default-deny</p>
+            <p>POST /actors/fs without auth → 401/403; no queue entry.</p>
+            <p class="muted small">Blocks unauth privileged tool invocation.</p>
+          </article>
+          <article class="seed-card allow" data-step="3">
+            <p class="label">Step 3 — Filesystem allowlist</p>
+            <p>Mint dev token for actor.fs.read; list state dir; expect 200 queued; fs-requests.ndjson entry.</p>
+            <p class="muted small">Scoped authz + queue receipts.</p>
+          </article>
+          <article class="seed-card deny" data-step="4">
+            <p class="label">Step 4 — Network default-deny</p>
+            <p>POST /actors/http url=http://127.0.0.1 denied (private IP block).</p>
+            <p class="muted small">Egress governance / SSRF prevention.</p>
+          </article>
+          <article class="seed-card allow" data-step="5">
+            <p class="label">Step 5 — Network allowlist</p>
+            <p>POST /actors/http allowlisted host accepted and queued; http-requests.ndjson entry.</p>
+            <p class="muted small">Only allowlisted outbound, recorded as receipts.</p>
+          </article>
+          <article class="seed-card" data-step="6">
+            <p class="label">Step 6 — Trace continuity</p>
+            <p>GET /reflection/events?limit=5 returns events; reflection log exists.</p>
+            <p class="muted small">Evidence stream beyond terminal output.</p>
+          </article>
+          <article class="seed-card" data-step="7">
+            <p class="label">Step 7 — Restart continuity</p>
+            <p>~/.symbia-seed-current present; two /status calls return same install.id + t0_iso.</p>
+            <p class="muted small">Stable identity and continuity pointer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Evidence</p>
+          <h2>What to save as proof</h2>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card emphasis">
+            <p class="label">API responses</p>
+            <ul class="seed-list">
+              <li>Step 1: /health, /status bodies</li>
+              <li>Step 2: 401/403 FS deny</li>
+              <li>Step 3: 200/queued FS list</li>
+              <li>Step 4: private IP deny</li>
+              <li>Step 5: 200/queued allowlisted host</li>
+              <li>Step 6: /reflection/events?limit=5</li>
+              <li>Step 7: two /status + pointer file</li>
+            </ul>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Runtime logs</p>
+            <ul class="seed-list">
+              <li>API log lines per request (deny/enqueue markers).</li>
+            </ul>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Durable evidence</p>
+            <ul class="seed-list">
+              <li>FS queue: fs-requests.ndjson</li>
+              <li>HTTP queue: http-requests.ndjson</li>
+              <li>Reflection: events.ndjson</li>
+              <li>Pointer: ~/.symbia-seed-current</li>
+            </ul>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Export bundle (offline)</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>mkdir -p ~/alpha2-evidence
+cp ~/.symbia-seed/logs/symbia-seed.api.log ~/alpha2-evidence/
+cp ~/.symbia-seed/logs/internal/fs-requests.ndjson ~/alpha2-evidence/ || true
+cp ~/.symbia-seed/logs/internal/http-requests.ndjson ~/alpha2-evidence/ || true
+cp ~/.symbia-seed/logs/reflection/events.ndjson ~/alpha2-evidence/ || true
+cp ~/.symbia-seed-current ~/alpha2-evidence/ || true
+tar -czf alpha2-evidence-2025-12-13.tar.gz -C ~/alpha2-evidence .</pre></div>
+            <p class="muted small">Redact tokens; document any redactions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Audit posture</p>
+          <h2>Cybersecurity, privacy, reliability</h2>
+        </div>
+        <div class="seed-grid seed-grid-3">
+          <article class="seed-card"><p class="label">Cybersecurity</p><p>Auth boundary enforced; scoped authz; default-deny + governed egress; allowlisting; audit/event trails; stable identity.</p></article>
+          <article class="seed-card"><p class="label">Privacy</p><p>No data access without auth; narrow grants; no arbitrary outbound; accountability via logs; clear continuity boundaries.</p></article>
+          <article class="seed-card"><p class="label">Reliability</p><p>Readiness/status endpoints; fail-closed; queue acceptance; reflection events; state pointer + stable identity.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Scope boundary</p>
+          <h2>Alpha-2 only</h2>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card">
+            <p>Included: Boot + identity; FS default-deny; FS allowlist; HTTP default-deny (private IP block); HTTP allowlist (queue only); trace continuity; restart continuity.</p>
+            <p>Excluded: any additional tests/extensions or future-phase assertions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section seed-drama">
+      <div class="seed-container">
+        <div class="section-head">
+          <p class="eyebrow">Completion</p>
+          <h2>Criteria</h2>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card">
+            <p>Steps 1–7 pass, and an auditor can independently confirm via:</p>
+            <ul class="seed-list">
+              <li>API responses (health/status/reflection)</li>
+              <li>API log (~/.symbia-seed/logs/symbia-seed.api.log)</li>
+              <li>Queue logs (fs-requests.ndjson, http-requests.ndjson)</li>
+              <li>Reflection log (events.ndjson)</li>
+              <li>State pointer (~/.symbia-seed-current)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo small">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="muted">Local-first · Inspectable · Audit-ready</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#primitives">Positioning</a>
+        <a href="index.html#developers">Developers</a>
+        <a href="mailto:hello@symbia-labs.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="muted small">Symbia Labs builds governed execution for agentic systems. No cookies by default.</p>
+    </div>
+  </footer>
+
+  <script src="bg.js"></script>
+  <script src="scripts/privacy.js"></script>
+  <script>
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.copy-btn')) {
+        const pre = e.target.parentElement.querySelector('pre');
+        if (!pre) return;
+        const text = pre.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+          e.target.textContent = 'Copied';
+          setTimeout(() => { e.target.textContent = 'Copy'; }, 1200);
+        }).catch(() => {});
+      }
+    });
+  </script>
+</body>
+</html>
