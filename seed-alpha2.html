@@ -52,7 +52,7 @@
               <p class="lede">Guided, auditable mission to validate execution-layer posture: identity, auth, default-deny, scoped authz, governed egress, traceability, continuity.</p>
               <div class="pill-row">
                 <span class="chip">Alpha-2 missionctl</span>
-                <span class="chip">Version 2025-12-13.A</span>
+                <span class="chip">Version 2025-12-15.A</span>
                 <span class="chip">Receipts-first</span>
               </div>
             </div>
@@ -93,6 +93,13 @@
           <p class="section-lede">What users reported and how we shipped the fix.</p>
         </div>
         <div class="seed-grid seed-grid-2">
+          <article class="seed-card emphasis">
+            <p class="label">Missionctl pytest detection</p>
+            <ul class="seed-list">
+              <li><strong>Bug:</strong> Script reported "pytest not found" even when a virtualenv was active.</li>
+              <li><strong>Fix:</strong> Auto-bootstraps pytest into <code>.venv</code> if missing and limits discovery to Alpha-2 tests so no extra deps are required.</li>
+            </ul>
+          </article>
           <article class="seed-card emphasis">
             <p class="label">Installer temp path (macOS)</p>
             <ul class="seed-list">
