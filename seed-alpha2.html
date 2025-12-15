@@ -88,6 +88,32 @@
     <section class="section">
       <div class="seed-container">
         <div class="section-head">
+          <p class="eyebrow">Alpha-2 updates</p>
+          <h2>Transparent release notes</h2>
+          <p class="section-lede">What users reported and how we shipped the fix.</p>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card emphasis">
+            <p class="label">Installer temp path (macOS)</p>
+            <ul class="seed-list">
+              <li><strong>Bug:</strong> Mixed /tmp locations could leave archives and checksums in different dirs.</li>
+              <li><strong>Fix:</strong> Single <code>mktemp -d</code> temp dir on macOS/Linux, logged paths, cleanup on exit.</li>
+            </ul>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Checksum determinism</p>
+            <ul class="seed-list">
+              <li><strong>Bug:</strong> Verification ran in the current dir; mismatched filenames could sneak through.</li>
+              <li><strong>Fix:</strong> Hash the exact downloaded archive and compare to the expected SHA256 from the release.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
           <p class="eyebrow">Executive summary</p>
           <h2>What Alpha-2 is</h2>
           <p class="section-lede">A guided, auditable mission proving the runtime can say “no” reliably, say “yes” narrowly, and leave receipts either way.</p>
