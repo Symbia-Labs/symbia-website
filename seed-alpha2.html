@@ -203,6 +203,7 @@ certificate-oidc-issuer https://token.actions.githubusercontent.com &lt;tar.gz&g
               <li>Logs: <code>${STATE_DIR}/logs/symbia-seed.api.log</code></li>
               <li>Traces: <code>${STATE_DIR}/logs/reflection/events.ndjson</code></li>
               <li>Demo token: <code>${STATE_DIR}/auth/demo.token</code> (chmod 600)</li>
+              <li>No git clone needed: installer pulls the dist into <code>~/.symbia-seed-dist</code> and shims <code>symbia</code>/<code>audit</code> into <code>~/bin</code>. Ensure <code>$HOME/bin</code> is on PATH.</li>
               <li>macOS: system has a built-in <code>audit</code>; ensure <code>$HOME/bin</code> is before <code>/usr/sbin</code> or run <code>./scripts/audit.sh</code> from the repo.</li>
             </ul>
           </article>
