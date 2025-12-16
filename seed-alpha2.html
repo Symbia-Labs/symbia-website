@@ -65,13 +65,13 @@
       <div class="seed-container">
         <div class="section-head">
           <p class="eyebrow">Start here</p>
-          <h2>Run Alpha-2 locally</h2>
-          <p class="section-lede">Install, boot the dev seed, then run the guided mission.</p>
+          <h2>Run Early Access locally</h2>
+          <p class="section-lede">Install, boot the dev seed, then run the unified audits.</p>
         </div>
         <div class="seed-grid seed-grid-3">
           <article class="seed-card emphasis">
             <p class="label">1. Install</p>
-            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-alpha2-early-access/main/install-alpha2.sh | bash</pre></div>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-seed-early-access/main/scripts/install.sh | bash</pre></div>
           </article>
           <article class="seed-card emphasis">
             <p class="label">2. Run</p>
@@ -79,7 +79,7 @@
           </article>
           <article class="seed-card emphasis">
             <p class="label">3. Test</p>
-            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>alpha-2 missionctl</pre></div>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>audit</pre></div>
           </article>
         </div>
       </div>
@@ -88,13 +88,13 @@
     <section class="section">
       <div class="seed-container">
         <div class="section-head">
-          <p class="eyebrow">Alpha-2 updates</p>
+          <p class="eyebrow">Early Access updates</p>
           <h2>Transparent release notes</h2>
           <p class="section-lede">What users reported and how we shipped the fix.</p>
         </div>
         <div class="seed-grid seed-grid-2">
           <article class="seed-card emphasis">
-            <p class="label">Missionctl pytest detection</p>
+            <p class="label">Audit harness pytest detection</p>
             <ul class="seed-list">
               <li><strong>Bug:</strong> Script reported "pytest not found" even when a virtualenv was active.</li>
               <li><strong>Fix:</strong> Auto-bootstraps pytest into <code>.venv</code> if missing and limits discovery to Alpha-2 tests so no extra deps are required.</li>
@@ -122,7 +122,7 @@
       <div class="seed-container">
         <div class="section-head">
           <p class="eyebrow">Executive summary</p>
-          <h2>What Alpha-2 is</h2>
+          <h2>What Early Access is</h2>
           <p class="section-lede">A guided, auditable mission proving the runtime can say “no” reliably, say “yes” narrowly, and leave receipts either way.</p>
         </div>
         <div class="seed-grid seed-grid-3">
@@ -174,8 +174,8 @@
         <div class="seed-grid seed-grid-2">
           <article class="seed-card emphasis">
             <p class="label">Install (no git clone)</p>
-            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-alpha2-early-access/main/install-alpha2.sh | bash</pre></div>
-            <p class="muted small">Installs to <code>~/.symbia-seed-dist</code>; shims in <code>~/bin</code> (<code>symbia</code>, <code>alpha-2</code>).</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-seed-early-access/main/scripts/install.sh | bash</pre></div>
+            <p class="muted small">Installs to <code>~/.symbia-seed-dist</code>; shims in <code>~/bin</code> (<code>symbia</code>, <code>audit</code>).</p>
           </article>
           <article class="seed-card emphasis">
             <p class="label">Integrity checks</p>
@@ -191,15 +191,15 @@ certificate-oidc-issuer https://token.actions.githubusercontent.com &lt;tar.gz&g
             <p class="label">Run commands</p>
             <ul class="seed-list">
               <li><code>symbia boot dev</code></li>
-              <li><code>alpha-2 missionctl</code> (15s wait for endpoints)</li>
-              <li>Run steps 1→7 in order (Step 6 expects prior steps).</li>
+              <li><code>audit</code> (choose Visibility or Enforcement)</li>
+              <li>Run steps in order if prompted; both suites are self-contained.</li>
             </ul>
           </article>
           <article class="seed-card emphasis">
             <p class="label">Notes</p>
             <ul class="seed-list">
-              <li><code>missionctl</code> waits for API healthy before steps.</li>
-              <li>State dir: <code>~/.symbia-seed-alpha2</code>; pointer: <code>~/.symbia-seed-current</code></li>
+              <li><code>audit</code> waits for API healthy before steps.</li>
+              <li>State dir: <code>~/.symbia-seed</code> (or <code>${SYMBIA_STATE_DIR}</code>); pointer: <code>~/.symbia-seed-current</code></li>
               <li>Logs: <code>${STATE_DIR}/logs/symbia-seed.api.log</code></li>
               <li>Traces: <code>${STATE_DIR}/logs/reflection/events.ndjson</code></li>
               <li>Demo token: <code>${STATE_DIR}/auth/demo.token</code> (chmod 600)</li>
