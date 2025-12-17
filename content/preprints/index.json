@@ -1,0 +1,23 @@
+{
+  "updated": "2025-12-17T18:29:29.805Z",
+  "items": [
+    {
+      "slug": "commit-first-event-substrates-for-probabilistic-decision-systems",
+      "title": "Commit-First Event Substrates for Probabilistic Decision Systems",
+      "date": "2025-01-04",
+      "tags": [
+        "execution safety",
+        "probabilistic systems",
+        "event substrates"
+      ],
+      "authors": [
+        "Brian Gilmore"
+      ],
+      "summary": "How a commit-first event substrate (CEB) binds authority, time, and action before probabilistic systems run so we can replay, audit, and govern what happened.",
+      "status": "Preprint",
+      "source": "content/preprints/commit_first_event_substrates_for_probabilistic_decision_systems.md",
+      "url": "content.html?type=preprints&slug=commit-first-event-substrates-for-probabilistic-decision-systems",
+      "timestamp": 1735948800000
+    }
+  ]
+}

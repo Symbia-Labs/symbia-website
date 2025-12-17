@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbia Labs | Content</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="content">
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="header-row">
+      <a class="brand brand-link" href="index.html">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="brandline">Governed execution</p>
+        </div>
+      </a>
+    </div>
+    <nav class="nav-links nav-primary" aria-label="Primary">
+      <a href="research.html">Research</a>
+      <a href="preprints.html">Preprints</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://github.com/Symbia-Labs">Open Source</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero article-hero">
+      <div class="hero-shell">
+        <div class="article-head">
+          <a class="back-link" id="article-back" href="preprints.html"><- Back to Preprints</a>
+          <p class="eyebrow" id="article-type">Working draft</p>
+          <h1 id="article-title">Loading...</h1>
+          <p class="section-lede" id="article-summary">Fetching content.</p>
+          <div class="meta-row article-meta">
+            <span class="chip subtle" id="article-status">Loading</span>
+            <span class="chip ghost" id="article-date"></span>
+            <span class="muted" id="article-authors"></span>
+          </div>
+          <div class="tag-row" id="article-tags"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <article class="content-article" id="article-body">
+        <p class="muted">Loading content...</p>
+      </article>
+      <div class="article-actions">
+        <a class="btn ghost" id="article-download" href="#" download>Download markdown</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo small">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="muted">Local-first · Inspectable · Audit-ready</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#primitives">Positioning</a>
+        <a href="index.html#developers">Developers</a>
+        <a href="mailto:hello@symbia-labs.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="muted small">Symbia Labs builds governed execution for agentic systems. No cookies by default.</p>
+    </div>
+  </footer>
+
+  <script src="bg.js"></script>
+  <script src="scripts/vendor/marked.min.js"></script>
+  <script src="scripts/content.js"></script>
+  <script src="scripts/privacy.js"></script>
+</body>
+</html>

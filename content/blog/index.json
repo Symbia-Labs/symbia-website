@@ -1,0 +1,23 @@
+{
+  "updated": "2025-12-17T18:29:29.811Z",
+  "items": [
+    {
+      "slug": "local-first-governed-observers",
+      "title": "Local-first governed observers",
+      "date": "2024-12-15",
+      "tags": [
+        "local-first",
+        "observability",
+        "governance"
+      ],
+      "authors": [
+        "Brian Gilmore"
+      ],
+      "summary": "Notes on how we design observer surfaces so teams can review traces, lineage, and epistemic envelopes without shipping data off the box.",
+      "status": "Blog posts",
+      "source": "content/blog/local-first-governed-observers.md",
+      "url": "content.html?type=blog&slug=local-first-governed-observers",
+      "timestamp": 1734220800000
+    }
+  ]
+}

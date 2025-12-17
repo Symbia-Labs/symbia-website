@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symbia Labs | Services</title>
+  <title>Symbia Labs | Blog</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="blog">
   <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
   <div class="grid-overlay" aria-hidden="true"></div>
   <div class="orb orb-a" aria-hidden="true"></div>
@@ -32,7 +32,6 @@
       <a href="https://github.com/Symbia-Labs">Open Source</a>
       <a href="products.html">Products</a>
       <a href="services.html">Services</a>
-      <a class="outline" href="mailto:hello@symbia-labs.com">Contact Us</a>
     </nav>
   </header>
 
@@ -41,35 +40,31 @@
       <div class="hero-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Services for teams shipping governed automation.</h1>
-            <p class="lede">Advisory, reviews, and implementation support to keep agentic systems bounded, observable, and auditable.</p>
+            <h1>Personal notes from the team.</h1>
+            <p class="lede">Quick takes, build logs, and behind-the-scenes thinking on governed automation.</p>
             <div class="pill-row">
-              <span class="chip">Architecture reviews</span>
-              <span class="chip">Security &amp; privacy</span>
-              <span class="chip">Reliability &amp; evals</span>
+              <span class="chip">Build logs</span>
+              <span class="chip">Research notes</span>
+              <span class="chip">Field reports</span>
             </div>
           </div>
           <div class="hero-panel">
             <div class="panel-head">
-              <p class="eyebrow">Posture</p>
-              <p class="muted">Execution-first. Governance before action.</p>
+              <p class="eyebrow">How this works</p>
+              <p class="muted">Drop markdown files into <code>content/blog</code>; they appear here automatically after indexing.</p>
             </div>
             <div class="fact-list">
               <div class="fact">
-                <p class="label">Boundaries</p>
-                <p class="value">Define allowed surfaces, time, and authority.</p>
+                <p class="label">Voice</p>
+                <p class="value">First-person notes from the lab.</p>
               </div>
               <div class="fact">
-                <p class="label">Identity</p>
-                <p class="value">Genesis/Symbia Key lineage across agents and artifacts.</p>
+                <p class="label">Cadence</p>
+                <p class="value">Publish as often as you like; the content pipeline is static.</p>
               </div>
               <div class="fact">
-                <p class="label">Observability</p>
-                <p class="value">Replayable traces with provenance and uncertainty.</p>
-              </div>
-              <div class="fact">
-                <p class="label">Safety</p>
-                <p class="value">Prevent unsafe execution; prove what ran and why.</p>
+                <p class="label">Format</p>
+                <p class="value">Markdown with light front matter for metadata.</p>
               </div>
             </div>
           </div>
@@ -79,39 +74,27 @@
 
     <section class="section">
       <div class="section-head">
-        <p class="eyebrow">Advisory</p>
-        <h2>How we work with teams</h2>
-        <p class="section-lede">Short, senior engagements that make governed autonomy operational.</p>
+        <p class="eyebrow">Blog</p>
+        <h2>Latest posts</h2>
+        <p class="section-lede">Markdown-sourced posts rendered directly from <code>content/blog</code>.</p>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <p class="label">Architecture review</p>
-          <p>Execution surfaces, policy gates, and traceability patterns tailored to your stack.</p>
-        </article>
-        <article class="card">
-          <p class="label">Security &amp; privacy</p>
-          <p>Identity lineage, access scopes, and audit-grade evidence for regulated environments.</p>
-        </article>
-        <article class="card">
-          <p class="label">Reliability &amp; evals</p>
-          <p>Deterministic pathways, bounded autonomy, and evaluation harnesses for agent pipelines.</p>
-        </article>
-        <article class="card">
-          <p class="label">Implementation support</p>
-          <p>Pairing to deploy Seed, observers, and policy bindings for production agents.</p>
-        </article>
+      <div class="content-grid" data-content-list></div>
+      <div class="empty-state" data-empty-state style="display:none;">
+        <p class="muted">No posts yet. Add markdown files to <code>content/blog</code> and rebuild the index.</p>
       </div>
+      <p class="muted small" data-content-updated></p>
     </section>
 
     <section class="section">
       <div class="cta-card">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h3>Work with Symbia Labs</h3>
-          <p class="section-lede">For teams that need governed automation with traceable outcomes.</p>
+          <p class="eyebrow">Follow along</p>
+          <h3>Want updates in your inbox?</h3>
+          <p class="section-lede">Drop us a note and we will include you on release and research updates.</p>
         </div>
         <div class="cta-actions">
-          <a class="btn primary" href="mailto:hello@symbia-labs.com">Contact us</a>
+          <a class="btn primary" href="mailto:hello@symbia-labs.com">Get updates</a>
+          <a class="btn ghost" href="research.html">Research overview</a>
         </div>
       </div>
     </section>
@@ -138,6 +121,7 @@
   </footer>
 
   <script src="bg.js"></script>
+  <script src="scripts/content.js"></script>
   <script src="scripts/privacy.js"></script>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symbia Labs | Services</title>
+  <title>Symbia Labs | Preprints</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body data-page="preprints">
   <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
   <div class="grid-overlay" aria-hidden="true"></div>
   <div class="orb orb-a" aria-hidden="true"></div>
@@ -32,7 +32,6 @@
       <a href="https://github.com/Symbia-Labs">Open Source</a>
       <a href="products.html">Products</a>
       <a href="services.html">Services</a>
-      <a class="outline" href="mailto:hello@symbia-labs.com">Contact Us</a>
     </nav>
   </header>
 
@@ -41,35 +40,31 @@
       <div class="hero-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Services for teams shipping governed automation.</h1>
-            <p class="lede">Advisory, reviews, and implementation support to keep agentic systems bounded, observable, and auditable.</p>
+            <h1>Pre-published papers and working drafts.</h1>
+            <p class="lede">Execution-first research we are circulating for feedback before formal publication.</p>
             <div class="pill-row">
-              <span class="chip">Architecture reviews</span>
-              <span class="chip">Security &amp; privacy</span>
-              <span class="chip">Reliability &amp; evals</span>
+              <span class="chip">Governed autonomy</span>
+              <span class="chip">Epistemic envelopes</span>
+              <span class="chip">Replayable traces</span>
             </div>
           </div>
           <div class="hero-panel">
             <div class="panel-head">
-              <p class="eyebrow">Posture</p>
-              <p class="muted">Execution-first. Governance before action.</p>
+              <p class="eyebrow">Why preprints</p>
+              <p class="muted">We share drafts early so teams can pressure-test approaches with us.</p>
             </div>
             <div class="fact-list">
               <div class="fact">
-                <p class="label">Boundaries</p>
-                <p class="value">Define allowed surfaces, time, and authority.</p>
+                <p class="label">Focus</p>
+                <p class="value">Execution safety, lineage, and auditability.</p>
               </div>
               <div class="fact">
-                <p class="label">Identity</p>
-                <p class="value">Genesis/Symbia Key lineage across agents and artifacts.</p>
+                <p class="label">Format</p>
+                <p class="value">Markdown stored in-repo, rendered directly here.</p>
               </div>
               <div class="fact">
-                <p class="label">Observability</p>
-                <p class="value">Replayable traces with provenance and uncertainty.</p>
-              </div>
-              <div class="fact">
-                <p class="label">Safety</p>
-                <p class="value">Prevent unsafe execution; prove what ran and why.</p>
+                <p class="label">Status</p>
+                <p class="value">Actively evolving with partner feedback.</p>
               </div>
             </div>
           </div>
@@ -79,39 +74,27 @@
 
     <section class="section">
       <div class="section-head">
-        <p class="eyebrow">Advisory</p>
-        <h2>How we work with teams</h2>
-        <p class="section-lede">Short, senior engagements that make governed autonomy operational.</p>
+        <p class="eyebrow">Research preprints</p>
+        <h2>Drafts, notes, and proposals</h2>
+        <p class="section-lede">Drop markdown into <code>content/preprints</code> and run the index script to publish.</p>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <p class="label">Architecture review</p>
-          <p>Execution surfaces, policy gates, and traceability patterns tailored to your stack.</p>
-        </article>
-        <article class="card">
-          <p class="label">Security &amp; privacy</p>
-          <p>Identity lineage, access scopes, and audit-grade evidence for regulated environments.</p>
-        </article>
-        <article class="card">
-          <p class="label">Reliability &amp; evals</p>
-          <p>Deterministic pathways, bounded autonomy, and evaluation harnesses for agent pipelines.</p>
-        </article>
-        <article class="card">
-          <p class="label">Implementation support</p>
-          <p>Pairing to deploy Seed, observers, and policy bindings for production agents.</p>
-        </article>
+      <div class="content-grid" data-content-list></div>
+      <div class="empty-state" data-empty-state style="display:none;">
+        <p class="muted">No preprints yet. Add markdown files to <code>content/preprints</code> and rebuild the index.</p>
       </div>
+      <p class="muted small" data-content-updated></p>
     </section>
 
     <section class="section">
       <div class="cta-card">
         <div>
-          <p class="eyebrow">Contact</p>
-          <h3>Work with Symbia Labs</h3>
-          <p class="section-lede">For teams that need governed automation with traceable outcomes.</p>
+          <p class="eyebrow">Collaborate</p>
+          <h3>Want to review or co-author?</h3>
+          <p class="section-lede">We pair with teams on policy, safety, and evaluation studies rooted in execution traces.</p>
         </div>
         <div class="cta-actions">
-          <a class="btn primary" href="mailto:hello@symbia-labs.com">Contact us</a>
+          <a class="btn primary" href="mailto:hello@symbia-labs.com">Reach out</a>
+          <a class="btn ghost" href="research.html">Back to research overview</a>
         </div>
       </div>
     </section>
@@ -138,6 +121,7 @@
   </footer>
 
   <script src="bg.js"></script>
+  <script src="scripts/content.js"></script>
   <script src="scripts/privacy.js"></script>
 </body>
 </html>
