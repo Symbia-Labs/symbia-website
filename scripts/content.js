@@ -61,17 +61,6 @@
     anchor.href = item.url;
     anchor.className = "card-link";
 
-    const meta = document.createElement("div");
-    meta.className = "meta-row";
-    const status = document.createElement("span");
-    status.className = "chip subtle";
-    status.textContent = item.status || "Update";
-    const date = document.createElement("time");
-    date.className = "muted";
-    date.dateTime = item.date || "";
-    date.textContent = formatDate(item.date);
-    meta.append(status, date);
-
     const title = document.createElement("h3");
     title.textContent = item.title;
 
@@ -79,24 +68,7 @@
     summary.className = "muted";
     summary.textContent = item.summary;
 
-    const footer = document.createElement("div");
-    footer.className = "content-card-footer";
-
-    if (item.authors && item.authors.length) {
-      const authors = document.createElement("p");
-      authors.className = "muted small";
-      authors.textContent = item.authors.join(" | ");
-      footer.appendChild(authors);
-    }
-
-    if (item.tags && item.tags.length) {
-      const tags = document.createElement("div");
-      tags.className = "tag-row";
-      item.tags.slice(0, 4).forEach((tag) => tags.appendChild(buildTagPill(tag)));
-      footer.appendChild(tags);
-    }
-
-    anchor.append(meta, title, summary, footer);
+    anchor.append(title, summary);
     card.append(anchor);
     return card;
   }
@@ -172,8 +144,6 @@
     const titleEl = document.getElementById("article-title");
     const dateEl = document.getElementById("article-date");
     const authorsEl = document.getElementById("article-authors");
-    const statusEl = document.getElementById("article-status");
-    const tagsEl = document.getElementById("article-tags");
     const backLink = document.getElementById("article-back");
     const typeEl = document.getElementById("article-type");
     const downloadLink = document.getElementById("article-download");
@@ -206,11 +176,7 @@
     if (titleEl) titleEl.textContent = item.title;
     if (summaryEl) summaryEl.textContent = item.summary;
     if (dateEl) dateEl.textContent = formatDate(item.date);
-    if (statusEl) statusEl.textContent = item.status || "Update";
     if (authorsEl) authorsEl.textContent = item.authors ? item.authors.join(" | ") : "";
-    if (tagsEl && item.tags && item.tags.length) {
-      item.tags.forEach((tag) => tagsEl.appendChild(buildTagPill(tag)));
-    }
     if (downloadLink) {
       downloadLink.href = item.source;
       downloadLink.download = "";
