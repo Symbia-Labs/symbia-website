@@ -744,12 +744,12 @@ a.outline {
 .empty-state { margin-top: 16px; padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); }
 .article-hero { padding: 56px 24px 24px 8rem; }
 .article-hero::after { display: none; }
-.article-hero .hero-shell { border: 1px solid rgba(255, 255, 255, 0.08); max-width: 1100px; margin: 0 auto; }
-.article-head { max-width: 860px; }
+.article-hero .hero-shell { border: 1px solid rgba(255, 255, 255, 0.08); max-width: 1200px; width: calc(100% - 48px); margin: 0 auto; }
+.article-head { max-width: 1100px; }
 .article-head h1 { margin: 8px 0 12px; font-size: clamp(30px, 3.3vw, 42px); line-height: 1.1; }
 .article-meta { gap: 12px; margin-bottom: 12px; }
-.article-section { width: min(1000px, 100%); margin: 0 auto 70px; }
-.content-article { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); line-height: 1.6; max-width: 1100px; margin: 0 auto; }
+.article-section { width: min(1200px, calc(100% - 48px)); margin: 0 auto 70px; }
+.content-article { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 22px 24px; box-shadow: var(--shadow); line-height: 1.6; max-width: 1200px; width: 100%; margin: 0 auto; }
 .content-article h1, .content-article h2, .content-article h3, .content-article h4 { margin-top: 24px; margin-bottom: 10px; }
 .content-article p { margin: 0 0 12px; }
 .content-article ul, .content-article ol { padding-left: 20px; margin: 8px 0 14px; }
@@ -815,6 +815,9 @@ a.outline {
 
 @media (max-width: 720px) {
   .content-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .article-hero { padding-left: 24px; padding-right: 24px; }
+  .article-hero .hero-shell { width: 100%; }
+  .article-section { width: calc(100% - 32px); }
 }
 
 @media (max-width: 900px) {
