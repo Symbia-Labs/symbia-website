@@ -2,6 +2,10 @@
   const LIST_PAGES = ["preprints", "blog"];
 
   document.addEventListener("DOMContentLoaded", () => {
+    if (window.marked && window.marked.setOptions) {
+      window.marked.setOptions({ mangle: false, headerIds: false });
+    }
+
     const page = document.body.dataset.page;
     if (LIST_PAGES.includes(page)) {
       const container = document.querySelector("[data-content-list]");
@@ -152,6 +156,13 @@
       .replace(/'/g, "&#039;");
   }
 
+  function stripFrontMatter(markdown) {
+    if (!markdown.startsWith("---")) return markdown;
+    const end = markdown.indexOf("\n---", 3);
+    if (end === -1) return markdown;
+    return markdown.slice(end + 4).trimStart();
+  }
+
   async function renderArticle() {
     const params = new URLSearchParams(window.location.search);
     const type = params.get("type") === "blog" ? "blog" : "preprints";
@@ -208,7 +219,7 @@
 
     try {
       const res = await fetch(`${item.source}?ts=${Date.now()}`);
-      const markdown = await res.text();
+      const markdown = stripFrontMatter(await res.text());
       const html = window.marked
         ? window.marked.parse(markdown)
         : `<pre>${escapeHtml(markdown)}</pre>`;
