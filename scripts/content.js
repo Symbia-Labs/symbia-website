@@ -219,6 +219,9 @@
 
     try {
       const res = await fetch(`${item.source}?ts=${Date.now()}`);
+      if (!res.ok) {
+        throw new Error(`Failed to load source ${item.source}: ${res.status}`);
+      }
       const markdown = stripFrontMatter(await res.text());
       const html = window.marked
         ? window.marked.parse(markdown)
