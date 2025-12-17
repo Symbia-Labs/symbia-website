@@ -1,6 +1,132 @@
 {
-  "updated": "2025-12-17T18:41:38.069Z",
+  "updated": "2025-12-17T20:04:20.038Z",
   "items": [
+    {
+      "slug": "symbia-chapter-1-the-trace-exists",
+      "title": "Chapter 1 — The Trace Exists",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀* This text has timestamps because the system it describes has timestamps. That statement is not rhetorical. It is methodological. This is not a memoir. It is not a manifesto. It is not a whitepaper. It is not a retrospective reconstru...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_1_the_trace_exists.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-1-the-trace-exists",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-2-the-illusion-of-memory",
+      "title": "Chapter 2 — The Illusion of Memory",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₁* The first problem did not announce itself as a philosophical one. It appeared as a practical irritation. Conversations with large language models felt coherent. Not always, not reliably, but often enough to create a sense of con...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_2_the_illusion_of_memory.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-2-the-illusion-of-memory",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-3-when-things-go-wrong-we-cant-explain-why",
+      "title": "Chapter 3 — When Things Go Wrong, We Can’t Explain Why",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₂* The failure that followed was not louder than the ones before it. It was quieter, and more troubling. When conversations collapsed, it became increasingly difficult to say what had actually happened. A response would be wrong, b...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_3_when_things_go_wrong_we_cant_explain_why.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-3-when-things-go-wrong-we-cant-explain-why",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-4-protocols-are-not-minds",
+      "title": "Chapter 4 — Protocols Are Not Minds",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₃* The first instinct, after recognizing the failure of explanation, was not to invent something new. It was to look more closely at what already existed. If the problem was continuity, perhaps it lived in the interfaces. If the sy...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_4_protocols_are_not_minds.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-4-protocols-are-not-minds",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-5-why-agents-dont-fix-this-standalone",
+      "title": "Chapter 5 — Why Agents Don’t Fix This",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₄* Once it became clear that protocols could not supply continuity, attention shifted to the next obvious candidate: agents. Agent frameworks promised what interfaces could not. They spoke the language of autonomy, persistence, and...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_5_why_agents_dont_fix_this_standalone.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-5-why-agents-dont-fix-this-standalone",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-6-why-this-isnt-a-blockchain",
+      "title": "Chapter 6 — Why This Isn’t a Blockchain",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₅* Once identity began to look unavoidable, another solution presented itself almost automatically. If continuity required durability, perhaps it required a ledger. If explanation demanded history, perhaps that history needed to be...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_6_why_this_isnt_a_blockchain.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-6-why-this-isnt-a-blockchain",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-7-identity-before-meaning",
+      "title": "Chapter 7 — Identity Before Meaning",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₆* By the time the obvious substrates had been exhausted, the search space had collapsed. Protocols could not carry continuity. Agents could not own a self. Ledgers could not distinguish trace from truth. Each attempt failed for a ...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_7_identity_before_meaning.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-7-identity-before-meaning",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-7-identity-before-meaning-restated",
+      "title": "Chapter 7 — Identity Before Meaning (Restated)",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₆* By the time the obvious substrates had been exhausted, the search space had collapsed. Protocols could not carry continuity. Agents could not own a self. Ledgers could not distinguish trace from truth. Each attempt failed for a ...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_7_identity_before_meaning_restated.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-7-identity-before-meaning-restated",
+      "timestamp": 1765929600000
+    },
+    {
+      "slug": "symbia-chapter-8-semantic-collapse-to-identity",
+      "title": "Chapter 8 — Semantic Collapse to Identity",
+      "date": "2025-12-17",
+      "tags": [],
+      "authors": [
+        "Symbia Labs"
+      ],
+      "summary": "> *t₀ + Δ₇* Once identity was treated as a fact rather than a description, a second constraint followed almost immediately. Meaning could not be allowed to accumulate at the center. Up to this point, most systems had attempted the opposite ...",
+      "status": "Blog posts",
+      "source": "content/blog/symbia_chapter_8_semantic_collapse_to_identity.md",
+      "url": "content.html?type=blog&slug=symbia-chapter-8-semantic-collapse-to-identity",
+      "timestamp": 1765929600000
+    },
     {
       "slug": "local-first-governed-observers",
       "title": "Local-first governed observers",
