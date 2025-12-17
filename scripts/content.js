@@ -180,7 +180,7 @@
 
     if (backLink) {
       backLink.href = type === "blog" ? "blog.html" : "preprints.html";
-      backLink.textContent = type === "blog" ? "<- Back to Blog" : "<- Back to Preprints";
+      backLink.textContent = type === "blog" ? "Back to Blog" : "Back to Preprints";
     }
     if (typeEl) {
       typeEl.textContent = type === "blog" ? "Blog" : "Research preprint";
