@@ -66,23 +66,28 @@
     <section class="section">
       <div class="seed-container">
         <div class="section-head">
-          <p class="eyebrow">Start here</p>
-          <h2>Run Early Access locally</h2>
-          <p class="section-lede">Install, boot the dev seed, then run the unified audits.</p>
+          <p class="eyebrow">Try it now</p>
+          <h2>Run in-browser or on your machine</h2>
+          <p class="section-lede">Same harness, two launch paths: browser console (spawned sessions) or full local install.</p>
         </div>
-        <div class="seed-grid seed-grid-3">
+        <div class="seed-grid seed-grid-2">
           <article class="seed-card emphasis">
-            <p class="label">1. Install</p>
-            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-seed-early-access/main/scripts/install.sh | bash</pre></div>
+            <p class="label">Run in your browser</p>
+            <p class="muted small">Spawns an isolated session via the Replit-hosted console.</p>
+            <ul class="seed-list">
+              <li><a href="https://5a136cf1-9016-47ab-97c2-efe089a56d84-00-36a7wfh637s9w.spock.replit.dev/" target="_blank" rel="noreferrer">Open console</a> → create a session → run enforcement tests.</li>
+              <li>Daemon stays internal (port 8123); console is public (5000); admin is not exposed.</li>
+              <li>Spawned sessions are scoped; capacity limits protect the host.</li>
+            </ul>
           </article>
           <article class="seed-card emphasis">
-            <p class="label">2. Run</p>
-            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>export PATH="$HOME/bin:$PATH"
-symbia boot dev</pre></div>
-          </article>
-          <article class="seed-card emphasis">
-            <p class="label">3. Test</p>
-            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>audit</pre></div>
+            <p class="label">Run on your machine</p>
+            <p class="muted small">Full local install with both visibility and enforcement suites.</p>
+            <div class="code-block"><button class="copy-btn" data-copy>Copy</button><pre>curl -fsSL https://raw.githubusercontent.com/Symbia-Labs/symbia-seed-early-access/main/scripts/install.sh | bash
+export PATH="$HOME/bin:$PATH"
+symbia boot dev
+audit</pre></div>
+            <p class="muted small">State: <code>~/.symbia-seed</code>, pointer: <code>~/.symbia-seed-current</code>, logs: <code>~/.symbia-seed/logs</code>.</p>
           </article>
         </div>
       </div>
