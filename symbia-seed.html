@@ -217,6 +217,37 @@ certificate-oidc-issuer https://token.actions.githubusercontent.com &lt;tar.gz&g
     <section class="section">
       <div class="seed-container">
         <div class="section-head">
+          <p class="eyebrow">Deployment</p>
+          <h2>Replit plan for the public console</h2>
+          <p class="section-lede">How we expose the early-access portal while keeping the core daemon internal.</p>
+        </div>
+        <div class="seed-grid seed-grid-2">
+          <article class="seed-card emphasis">
+            <p class="label">Surface map</p>
+            <ul class="seed-list">
+              <li>Port 5000: public console at <code>www.symbia-labs.com</code></li>
+              <li>Port 8123: daemon (internal only, localhost)</li>
+              <li>Admin console: not exposed in production</li>
+              <li>CORS: restricted (SYMBIA_MODE ≠ dev)</li>
+              <li>Dev tokens: disabled in production</li>
+            </ul>
+          </article>
+          <article class="seed-card emphasis">
+            <p class="label">Go-live checklist</p>
+            <ul class="seed-list">
+              <li>Deploy on Replit Reserved VM</li>
+              <li>Bind domain: add <code>www.symbia-labs.com</code> in Replit, then create the CNAME/DNS records from Replit in your registrar</li>
+              <li>Decide tester auth (API keys/tokens) and set env vars before opening access</li>
+              <li>Keep daemon/admin internal; only the console is public</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="seed-container">
+        <div class="section-head">
           <p class="eyebrow">missionctl behavior</p>
           <h2>How to read results</h2>
         </div>
