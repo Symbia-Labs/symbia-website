@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbia Labs | Docs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="header-row">
+      <a class="brand brand-link" href="index.html">
+        <span class="brand-title">Symbia <span class="brand-accent">Labs</span></span>
+      </a>
+    </div>
+    <nav class="nav-links nav-primary" aria-label="Primary">
+      <a href="research.html">Research</a>
+      <a href="docs.html">Docs</a>
+      <a href="preprints.html">Preprints</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://github.com/Symbia-Labs">Open Source</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>Documentation and API</h1>
+            <p class="lede">Public docs, API, and specs for Symbia Seed. Everything here is meant to be inspectable and runnable on your own machine.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="api.html">Open API Explorer</a>
+              <a class="btn ghost" href="assets/openapi.yaml" download>Download OpenAPI YAML</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Start here</p>
+        <h2>Quick links</h2>
+      </div>
+      <ul>
+        <li><a href="api.html">API Explorer</a> — live endpoints for health, status, traces, and chat.</li>
+        <li><a href="assets/openapi.yaml" download>OpenAPI 3.0 (YAML)</a> — download the spec.</li>
+        <li><a href="https://github.com/Symbia-Labs/symbia-website/tree/main/docs" target="_blank" rel="noreferrer">Docs on GitHub</a> — full markdown tree.</li>
+        <li><a href="symbia-seed.html">Run Symbia Seed</a> — local-first runtime with governance enforced.</li>
+        <li><a href="mailto:hello@symbia-labs.com">Request deeper docs</a> — if you need additional materials.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Docs</p>
+        <h2>Key documents</h2>
+      </div>
+      <ul>
+        <li><a href="docs/architecture/quickstart.md">Architecture quickstart</a> — boot sequence and components.</li>
+        <li><a href="docs/architecture/seed/security.md">Seed security</a> — genesis key handling and trust model.</li>
+        <li><a href="docs/concept/premise.md">Premise</a> — why governance is part of execution.</li>
+        <li><a href="docs/architecture/logging-subsystem.md">Logging and traces</a> — how evidence is produced and audited.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">API</p>
+        <h2>Endpoints at a glance</h2>
+      </div>
+      <ul>
+        <li><code>/health</code> — uptime and version.</li>
+        <li><code>/status</code> — Seed + workers + persistence snapshot.</li>
+        <li><code>/trace/tail</code> — recent execution events.</li>
+        <li><code>/docs/index</code> — public docs tree.</li>
+        <li><code>/openapi.yaml</code> — OpenAPI 3.0 spec.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Source</p>
+        <h2>Specs and runtime</h2>
+      </div>
+      <p>Symbia publishes open specifications (Genesis Key System, Open Epistemic Protocol) and a governed runtime (Symbia Seed) that implements them. Protocols like MCP, HTTP, and MQTT are treated as transport; execution governance lives in Seed.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo small">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="muted">Local-first · Inspectable · Audit-ready</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#primitives">Positioning</a>
+        <a href="index.html#developers">Developers</a>
+        <a href="mailto:hello@symbia-labs.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="muted small">Symbia Labs builds governed execution for agentic systems. No cookies by default.</p>
+    </div>
+  </footer>
+
+  <script src="bg.js"></script>
+  <script src="scripts/privacy.js"></script>
+</body>
+</html>

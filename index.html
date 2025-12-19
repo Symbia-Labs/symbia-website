@@ -49,6 +49,7 @@
     </div>
     <nav class="nav-links nav-primary" aria-label="Primary">
       <a href="research.html">Research</a>
+      <a href="docs.html">Docs</a>
       <a href="https://github.com/Symbia-Labs">Open Source</a>
       <a href="products.html">Products</a>
       <a href="services.html">Services</a>
@@ -57,7 +58,6 @@
 
   <div class="anchor-links" aria-label="On this page">
     <a href="#primitives">How It Works</a>
-    <a href="#docs">Docs &amp; API</a>
     <a href="#developers">Developers</a>
     <a href="#cta">Contact Us</a>
   </div>
@@ -216,81 +216,6 @@
         <article class="card" data-flock-target><p>Infrastructure operations with approvals and audit trails.</p></article>
         <article class="card" data-flock-target><p>Regulated workflows (finance, healthcare, compliance).</p></article>
         <article class="card" data-flock-target><p>Agent systems that must fail closed, not fail weird.</p></article>
-      </div>
-    </section>
-
-    <section class="section" id="docs">
-      <div class="section-head">
-        <p class="eyebrow">Docs &amp; API</p>
-        <h2 data-copy="docs_api.headline">Learn how Symbia enforces governance.</h2>
-        <p class="section-lede" data-copy="docs_api.subhead">Read the docs, browse the API, or explore the spec.</p>
-        <p class="section-lede" data-copy="docs_api.body">We keep the execution model documented and inspectable.</p>
-      </div>
-      <div class="docs-grid">
-        <div class="card docs-panel" data-flock-target>
-          <div class="panel-head">
-            <div>
-              <p class="eyebrow">Docs Explorer</p>
-              <h3>High-signal public docs</h3>
-            </div>
-            <div class="doc-actions">
-              <a class="btn inline" href="https://github.com/Symbia-Labs/symbia-website/tree/main/docs" target="_blank" rel="noreferrer">Docs on GitHub</a>
-              <a class="btn ghost" href="mailto:hello@symbia-labs.com">Request full access</a>
-            </div>
-          </div>
-          <div class="docs-browser">
-            <div class="doc-list" id="doc-list"></div>
-            <div class="doc-viewer">
-              <div class="doc-meta">
-                <div>
-                  <p class="eyebrow">Document</p>
-                  <p class="label" id="doc-path">Select a document</p>
-                </div>
-                <a class="btn inline" id="doc-open-gh" href="#" target="_blank" rel="noreferrer">Open on GitHub</a>
-              </div>
-              <div class="doc-body" id="doc-body">
-                <p class="muted">Choose a document to preview.</p>
-              </div>
-              <div class="doc-status" id="doc-status"></div>
-            </div>
-          </div>
-        </div>
-        <div class="card api-panel" data-flock-target>
-          <p class="eyebrow">API surface</p>
-          <h3>OpenAPI + live endpoints</h3>
-          <p class="muted">Review health, status, docs, logs, chat, and worker endpoints. Open Swagger for the full schema or download the spec directly.</p>
-          <div class="endpoint-grid">
-            <div class="endpoint">
-              <p class="label">/health</p>
-              <p class="muted small">Minimal uptime + version.</p>
-            </div>
-            <div class="endpoint">
-              <p class="label">/status</p>
-              <p class="muted small">Seed + workers + persistence snapshot.</p>
-            </div>
-            <div class="endpoint">
-              <p class="label">/docs/index</p>
-              <p class="muted small">Public docs tree.</p>
-            </div>
-            <div class="endpoint">
-              <p class="label">/trace/tail</p>
-              <p class="muted small">Recent execution events.</p>
-            </div>
-            <div class="endpoint">
-              <p class="label">/chat/complete</p>
-              <p class="muted small">Chat relay with context.</p>
-            </div>
-            <div class="endpoint">
-              <p class="label">/openapi.yaml</p>
-              <p class="muted small">OpenAPI 3.0 spec.</p>
-            </div>
-          </div>
-          <div class="cta-row">
-            <a class="btn primary" href="api.html">Open API Explorer</a>
-            <a class="btn ghost" href="assets/openapi.yaml" download>Download YAML</a>
-            <a class="btn inline" href="https://github.com/Symbia-Labs/symbia-website/blob/main/assets/openapi.yaml" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -483,7 +408,7 @@ envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
           <h3>Deterministic lineage</h3>
           <p>Genesis Key fingerprints and Symbia Key constraints show up in status, identity snapshots, and traces. Evidence stays probabilistic; lineage stays deterministic.</p>
           <div class="cta-row">
-            <a class="btn inline" href="#docs">Docs overview</a>
+            <a class="btn inline" href="docs.html">Docs overview</a>
             <a class="btn ghost" href="mailto:hello@symbia-labs.com">Request deeper dive</a>
           </div>
         </article>
@@ -513,7 +438,7 @@ envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
             <p class="muted">How to drive the substrate.</p>
           </div>
           <p data-copy="developers.missions"></p>
-          <a class="btn inline" href="#docs">View docs overview</a>
+          <a class="btn inline" href="docs.html">View docs overview</a>
         </article>
         <article class="card" data-flock-target>
           <div class="card-top">
@@ -521,7 +446,7 @@ envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
             <p class="muted">Architecture, identity, governance, and cognition.</p>
           </div>
           <p data-copy="developers.docs"></p>
-          <a class="btn inline" href="#docs">View docs overview</a>
+          <a class="btn inline" href="docs.html">View docs overview</a>
         </article>
       </div>
 
@@ -731,7 +656,6 @@ envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
     })();
   </script>
   <script src="bg.js"></script>
-  <script src="scripts/docs-api.js?v=5"></script>
   <script src="scripts/hero-rotation.js"></script>
   <!-- GA4 analytics will be injected by privacy.js after consent -->
   <script src="scripts/privacy.js"></script>
