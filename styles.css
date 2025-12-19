@@ -340,11 +340,11 @@ a.outline {
   font-weight: 600;
 }
 
-.nav-links { display: flex; gap: 16px; align-items: center; }
+.nav-links { display: flex; gap: 32px; align-items: center; }
 .nav-links a { font-weight: 600; color: var(--text); }
 .nav-links a:hover { color: var(--accent); }
 
-.nav-primary { justify-content: flex-start; flex-wrap: wrap; margin: 6px auto 0; width: min(1100px, 100%); }
+.nav-primary { justify-content: center; flex-wrap: wrap; margin: 6px auto 0; width: 100%; }
 
 .anchor-links { display: none; }
 
@@ -871,8 +871,8 @@ a.outline {
 @media (max-width: 900px) {
   .topbar { align-items: flex-start; padding: 12px 16px 8px; }
   .header-row { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .nav-primary { justify-content: flex-start; margin: 10px 0 0; }
-  .nav-links { flex-wrap: wrap; }
+  .nav-primary { justify-content: center; margin: 10px 0 0; }
+  .nav-links { flex-wrap: wrap; gap: 20px; }
   .anchor-links { margin: 12px 16px 0; }
   main::before { display: none; }
   .hero, .section { padding-left: 16px; padding-right: 16px; }
