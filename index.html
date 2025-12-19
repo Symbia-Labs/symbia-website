@@ -57,438 +57,99 @@
   </header>
 
   <div class="anchor-links" aria-label="On this page">
-    <a href="#primitives">How It Works</a>
-    <a href="#developers">Developers</a>
-    <a href="#cta">Contact Us</a>
+    <a href="#problem">Problem</a>
+    <a href="#solution">Solution</a>
+    <a href="#seed">Run Seed</a>
+    <a href="#cta">Contact</a>
   </div>
 
   <main>
-    <div class="level-overlay" id="level-overlay">
-      <div class="level-card">
-        <p class="eyebrow">Calibrate</p>
-        <h2>How familiar are you with LLMs, information theory, and cryptography?</h2>
-        <p>Select the level that fits you. You can change this anytime from the top-right control.</p>
-        <div class="level-choices">
-          <button class="level-choice" data-level="1" type="button">
-            <span class="icon">🌱</span>
-            <div>
-              <strong>1 · Layperson</strong>
-              <span class="desc">Plain language, big-picture value.</span>
-            </div>
-          </button>
-          <button class="level-choice" data-level="2" type="button">
-            <span class="icon">🧭</span>
-            <div>
-              <strong>2 · Informed</strong>
-              <span class="desc">Concepts with light jargon.</span>
-            </div>
-          </button>
-          <button class="level-choice" data-level="3" type="button">
-            <span class="icon">🛠️</span>
-            <div>
-              <strong>3 · Practitioner</strong>
-              <span class="desc">Endpoints and practical flows.</span>
-            </div>
-          </button>
-          <button class="level-choice" data-level="4" type="button">
-            <span class="icon">🛰️</span>
-            <div>
-              <strong>4 · Advanced</strong>
-              <span class="desc">Architecture, schemas, guarantees.</span>
-            </div>
-          </button>
-          <button class="level-choice" data-level="5" type="button">
-            <span class="icon">🧬</span>
-            <div>
-              <strong>5 · Expert</strong>
-              <span class="desc">Specs, invariants, edge cases.</span>
-            </div>
-          </button>
-        </div>
-      </div>
-    </div>
     <section class="hero" id="top">
       <div class="hero-shell">
         <div class="hero-grid">
-          <div class="hero-copy" data-flock-target>
-            <h1 data-copy="hero.headline">Automation you can trust.</h1>
-            <p class="lede" data-copy="hero.subhead">Symbia is the execution layer for AI and automation: it makes actions governed, decisions traceable, and behavior controllable.</p>
+          <div class="hero-copy">
+            <h1>AI systems don’t fail loudly. They fail quietly.</h1>
+            <p class="lede">Symbia is the execution layer that makes autonomous systems behave by making their actions accountable, constrained, and inspectable.</p>
             <div class="cta-row">
               <a class="btn primary" href="symbia-seed.html">Run Symbia Seed</a>
               <a class="btn ghost" href="research.html">Read the position</a>
             </div>
-            <div class="pill-row">
-              <span class="chip">Governed execution</span>
-              <span class="chip">Observable autonomy</span>
-              <span class="chip">Accountable automation</span>
-            </div>
-          </div>
-          <div class="hero-panel" data-flock-target>
-            <div class="panel-head">
-              <p class="eyebrow">Symbia stance</p>
-              <p class="muted">Execution-first. Governance before action.</p>
-            </div>
-            <div class="fact-list">
-              <div class="fact">
-                <p class="label">Promise</p>
-                <p class="value">Trust and control as the first screen.</p>
-              </div>
-              <div class="fact">
-                <p class="label">Focus</p>
-                <p class="value">Execution and governance, not models or prompts.</p>
-              </div>
-              <div class="fact">
-                <p class="label">Outcome</p>
-                <p class="value">Actions stay attributable, reviewable, and bounded.</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="epistemic">
+    <section class="section" id="problem">
       <div class="section-head">
         <p class="eyebrow">Problem</p>
-        <h2>AI is powerful. The missing piece is control.</h2>
+        <h2>Modern AI can act — but nothing inside it is responsible.</h2>
       </div>
-      <div class="card-grid">
-        <article class="card" data-flock-target><p>Today’s agents act like black boxes.</p></article>
-        <article class="card" data-flock-target><p>Logs aren’t accountability.</p></article>
-        <article class="card" data-flock-target><p>Guardrails in prompts don’t scale.</p></article>
-      </div>
+      <p class="section-lede">Today’s systems decide and act without durable identity, without enforceable constraints, and without clear accountability. Logs appear after the fact. Prompts carry rules they cannot enforce.</p>
+      <p class="section-lede">When something goes wrong, there is no clear answer to: who acted, under what authority, and based on what assumptions.</p>
     </section>
 
-    <section class="section" id="what-is-symbia">
+    <section class="section" id="reframe">
+      <div class="section-head">
+        <p class="eyebrow">Reframing</p>
+        <h2>This is not a model problem.</h2>
+      </div>
+      <p class="section-lede">It is a system design problem. As AI moves from demos into infrastructure, finance, operations, and regulated environments, the missing layer is not intelligence. It is control.</p>
+    </section>
+
+    <section class="section" id="solution">
       <div class="section-head">
         <p class="eyebrow">Solution</p>
-        <h2>Symbia makes autonomy observable, auditable, and constrained.</h2>
+        <h2>Symbia makes autonomy accountable.</h2>
       </div>
       <div class="card-grid">
-        <article class="card allow" data-flock-target>
-          <p><strong>Identity</strong>: actions are bound to a durable identity.</p>
-        </article>
-        <article class="card allow" data-flock-target>
-          <p><strong>Constraints</strong>: policies are enforced before execution.</p>
-        </article>
-        <article class="card allow" data-flock-target>
-          <p><strong>Traceability</strong>: decisions produce an inspectable trail.</p>
-        </article>
+        <article class="card"><p><strong>Identity:</strong> every action is bound to a durable identity.</p></article>
+        <article class="card"><p><strong>Constraints:</strong> policies are enforced before execution.</p></article>
+        <article class="card"><p><strong>Traceability:</strong> decisions produce an inspectable trail.</p></article>
+        <article class="card"><p><strong>Continuity:</strong> behavior is consistent across time and runs.</p></article>
       </div>
+      <p class="section-lede">Not in prompts. Not in dashboards. In the execution layer itself.</p>
     </section>
 
-    <section class="section" id="what-symbia-is-not">
-      <div class="section-head">
-        <p class="eyebrow">How it works</p>
-        <h2>Execution layer, not another protocol.</h2>
-        <p class="section-lede">We treat MCP, HTTP, MQTT, and gRPC as transport and interfaces. Symbia sits above them to provide identity, continuity, constraints, and traceability.</p>
-      </div>
-    </section>
-
-    <section id="problem" class="section problem-section">
-      <div class="section-head">
-      <div class="section-head">
-        <p class="eyebrow">Components</p>
-        <h2>What we’ve built</h2>
-      </div>
-      <div class="card-grid">
-        <article class="card" data-flock-target>
-          <p class="label">Symbia Seed</p>
-          <p>A governed runtime for running automation with identity, constraints, and traces.</p>
-        </article>
-        <article class="card" data-flock-target>
-          <p class="label">Open Epistemic Protocol</p>
-          <p>A contract for expressing what’s known, inferred, or unknown—explicitly.</p>
-        </article>
-        <article class="card" data-flock-target>
-          <p class="label">Genesis Key System</p>
-          <p>A canonical identity root for systems that must be accountable over time.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="mvv">
-      <div class="section-head">
-        <p class="eyebrow">Use cases</p>
-        <h2>Where this matters</h2>
-      </div>
-      <div class="card-grid">
-        <article class="card" data-flock-target><p>Infrastructure operations with approvals and audit trails.</p></article>
-        <article class="card" data-flock-target><p>Regulated workflows (finance, healthcare, compliance).</p></article>
-        <article class="card" data-flock-target><p>Agent systems that must fail closed, not fail weird.</p></article>
-      </div>
-    </section>
-
-    <section class="section" id="primitives">
+    <section class="section" id="positioning">
       <div class="section-head">
         <p class="eyebrow">Positioning</p>
-        <h2>Where Symbia fits</h2>
-        <p class="section-lede">Above models and protocols. Below applications and interfaces.</p>
-        <p class="section-lede">Symbia governs execution, not cognition or transport.</p>
+        <h2>Execution layer, not another protocol.</h2>
       </div>
-      <div class="card-grid">
-        <article class="card" data-flock-target><p>Above models. Symbia does not shape predictions.</p></article>
-        <article class="card" data-flock-target><p>Above protocols. Symbia does not move packets.</p></article>
-        <article class="card" data-flock-target><p>Below applications. It governs what runs before interfaces act.</p></article>
-        <article class="card" data-flock-target><p>Execution is the focus. Cognition and transport stay separate.</p></article>
-      </div>
+      <p class="section-lede">Models generate predictions. Protocols like MCP, HTTP, and MQTT move messages. Symbia governs what is allowed to run, under which authority, and with what constraints.</p>
     </section>
 
-    <section class="section" id="surfaces">
+    <section class="section" id="seed">
       <div class="section-head">
-        <p class="eyebrow">Architecture</p>
-        <h2 data-copy="early_surfaces_premise.headline"></h2>
-        <p class="section-lede" data-copy="early_surfaces_premise.subhead"></p>
-        <p class="section-lede" data-copy="early_surfaces_premise.body"></p>
+        <p class="eyebrow">Proof</p>
+        <h2>A concrete runtime you can run today</h2>
       </div>
-      <div class="split">
-        <div class="card stack" data-flock-target>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Canon layout</p>
-              <p>Symbia-aware project layout for docs, logs, keys, and specs; canonical ledgers keep the narrative grounded.</p>
-            </div>
-          </div>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Abstraction layer</p>
-              <p>Execution pipelines coordinate tools; policy decides what may run.</p>
-            </div>
-          </div>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-          <p class="label">Identity + preferences (Symbia Key)</p>
-              <p>Portable representation of constraints, priorities, and interaction patterns.</p>
-            </div>
-          </div>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Artifact surfaces</p>
-              <p>Observer UI, docs viewer, and API endpoints expose traces, status, and outputs with lineage.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card quote" data-flock-target>
-          <p class="label">Substrate diagram</p>
-          <p class="quote-text">Canon (GKS) -> Abstraction (OEP-governed workers) -> Artifact (UI/API) with traceable flows.</p>
-          <p class="muted">Layered spectrum from identity to artifact, kept local-first. Every surface (API, Observer UI, CLI, docs viewer) renders governed artifacts with the same lineage.</p>
-        </div>
+      <p class="section-lede">Symbia Seed is a local-first execution runtime that embodies this approach. You can run it on your own machine, inspect its behavior, and see where decisions come from.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="symbia-seed.html">Run Seed locally</a>
       </div>
     </section>
 
-    <section class="section" id="pillars">
+    <section class="section" id="why">
       <div class="section-head">
-        <p class="eyebrow">Pillars</p>
-        <h2 data-copy="continuity_pillars.headline"></h2>
-        <p class="section-lede" data-copy="continuity_pillars.subhead"></p>
-        <p class="section-lede" data-copy="continuity_pillars.body"></p>
+        <p class="eyebrow">Why</p>
+        <h2>Why this exists</h2>
       </div>
-      <div class="pillars">
-        <div class="pillar" data-flock-target>
-          <p class="label">Identity &amp; lineage</p>
-          <h4>Genesis/Symbia Key keep who/what intact across sessions, tools, and artifacts.</h4>
+      <p class="section-lede">We are not trying to make AI smarter. We are trying to make it behave well enough to trust. That requires systems that can refuse actions, explain why, and show who was responsible.</p>
+    </section>
+
+    <section class="section cta" id="cta">
+      <div class="cta-card">
+        <div>
+          <p class="eyebrow">Closing</p>
+          <h2>Autonomy without governance is just speed without control.</h2>
+          <p class="section-lede">If you are deploying systems that act in the real world, you need a place where responsibility actually lives. That place is the execution layer. That is what Symbia provides.</p>
         </div>
-        <div class="pillar" data-flock-target>
-          <p class="label">Evidence &amp; epistemics</p>
-          <h4>OEP declares uncertainty, claims, and provenance so reasoning is explainable.</h4>
-        </div>
-        <div class="pillar" data-flock-target>
-          <p class="label">Governed execution</p>
-          <h4>Constraints apply before actions run; pipelines stay bounded.</h4>
-        </div>
-        <div class="pillar" data-flock-target>
-          <p class="label">Observability</p>
-          <h4>Traces, ledgers, and telemetry are first-class so every step can be audited.</h4>
+        <div class="cta-actions">
+          <a class="btn primary" href="symbia-seed.html">Run Symbia Seed</a>
+          <a class="btn ghost" href="research.html">Read the position</a>
         </div>
       </div>
     </section>
-
-    <section class="section" id="process">
-      <div class="section-head">
-        <p class="eyebrow">Observability and audit</p>
-        <h2>Evidence from every action</h2>
-        <p class="section-lede">Every action produces structured traces.</p>
-        <p class="section-lede">Execution is ordered, attributable, and replayable. Auditable evidence survives beyond runtime.</p>
-      </div>
-      <div class="process-grid">
-        <div class="timeline" data-flock-target>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Trace</p>
-              <p>Each step records who acted, what ran, and under which limits.</p>
-            </div>
-          </div>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Order</p>
-              <p>Execution is ordered and replayable for review.</p>
-            </div>
-          </div>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Attribution</p>
-              <p>Identity and policy bind to every action and artifact.</p>
-            </div>
-          </div>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Audit</p>
-              <p>Evidence persists so outcomes can be explained to humans and institutions.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card code" data-flock-target id="quickstart">
-          <div class="panel-head">
-            <p class="eyebrow">Get Symbia Seed</p>
-            <p class="muted">Early-access, by request.</p>
-          </div>
-          <p>Early-access users receive setup instructions, ./scripts/seed.sh, OpenAPI (assets/openapi.yaml), and the Observer UI with trace views.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="symbia-seed.html">Try it out</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="credibility">
-      <div class="section-head">
-        <p class="eyebrow">Credibility</p>
-        <h2 data-copy="credibility.headline"></h2>
-        <p class="section-lede" data-copy="credibility.subhead"></p>
-        <p class="section-lede" data-copy="credibility.body"></p>
-      </div>
-      <div class="card-grid">
-        <article class="card code" data-flock-target data-levels="3 4 5">
-          <p class="label">API</p>
-          <h3>Health, status, traces</h3>
-          <p class="muted small">OpenAPI + live explorer.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="api.html">Open API explorer</a>
-            <a class="btn ghost" href="assets/openapi.yaml" download>Download YAML</a>
-          </div>
-        </article>
-        <article class="card code" data-flock-target data-levels="3 4 5">
-          <p class="label">Traces</p>
-          <h3>Evidence snippets</h3>
-          <p class="muted small">Each action is time-ordered with identity + mission.</p>
-          <pre>
-{"timestamp":"2025-12-02T03:00:00Z","event":"trace","summary":"mission.run","meta":{"worker":"supervisor","mission":"demo.mission"}}
-{"timestamp":"2025-12-02T03:00:05Z","event":"edit","file":"docs/architecture/symbia-seed.md","summary":"+canon->artifact link","meta":{"persona":"seed"}}</pre>
-        </article>
-        <article class="card" data-flock-target data-levels="1 2 3 4 5">
-          <p class="label">Run</p>
-          <h3>From canon to artifact</h3>
-          <ul class="use-list">
-            <li>Start Seed: <code>./scripts/seed.sh start</code> (API 8123, Observer 9000).</li>
-            <li>POST /event or /trace to log missions and worker activity.</li>
-            <li>GET /log/stream to watch canon move toward artifacts.</li>
-            <li>View docs and status without leaving the runtime.</li>
-          </ul>
-        </article>
-        <article class="card code" data-flock-target data-levels="4 5">
-          <p class="label">OEP</p>
-          <h3>Epistemics with guardrails</h3>
-          <p class="muted small">Envelope keeps obligations/refusals/unknowns explicit.</p>
-          <pre>
-obligations: cite_sources, mark_hypotheses
-refusals: missing_provenance, user_constraints_violation
-epistemic_types: claim, hypothesis, observation, refusal
-envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
-        </article>
-        <article class="card" data-flock-target data-levels="2 3 4 5">
-          <p class="label">Identity</p>
-          <h3>Deterministic lineage</h3>
-          <p>Genesis Key fingerprints and Symbia Key constraints show up in status, identity snapshots, and traces. Evidence stays probabilistic; lineage stays deterministic.</p>
-          <div class="cta-row">
-            <a class="btn inline" href="docs.html">Docs overview</a>
-            <a class="btn ghost" href="mailto:hello@symbia-labs.com">Request deeper dive</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="developers">
-      <div class="section-head">
-        <p class="eyebrow">Developers</p>
-        <h2 data-copy="developers.headline"></h2>
-        <p class="section-lede" data-copy="developers.subhead"></p>
-        <p class="section-lede" data-copy="developers.body"></p>
-      </div>
-      <div class="card-grid dev-grid">
-        <article class="card" data-flock-target>
-          <div class="card-top">
-            <p class="label">Symbia Seed (alpha1)</p>
-            <p class="muted">Minimal runtime, supervisor, workers, and static UI.</p>
-          </div>
-          <p class="muted" data-copy="developers.seed_summary"></p>
-          <p class="muted small" data-copy="developers.seed_boot"></p>
-          <a class="btn inline" href="mailto:hello@symbia-labs.com">Request access</a>
-        </article>
-        <article class="card" data-flock-target>
-          <div class="card-top">
-            <p class="label">Missions, traces, endpoints</p>
-            <p class="muted">How to drive the substrate.</p>
-          </div>
-          <p data-copy="developers.missions"></p>
-          <a class="btn inline" href="docs.html">View docs overview</a>
-        </article>
-        <article class="card" data-flock-target>
-          <div class="card-top">
-            <p class="label">Docs &amp; roadmaps</p>
-            <p class="muted">Architecture, identity, governance, and cognition.</p>
-          </div>
-          <p data-copy="developers.docs"></p>
-          <a class="btn inline" href="docs.html">View docs overview</a>
-        </article>
-      </div>
-
-    </section>
-
-    <section class="section" id="press">
-      <div class="section-head">
-        <p class="eyebrow">Press &amp; Media</p>
-        <h2>Execution-layer story in one place.</h2>
-        <p class="section-lede">Condensed press statement and founder Q&amp;A on GKS, OEP, and canon -> abstraction -> artifact.</p>
-      </div>
-      <div class="split">
-        <div class="card" data-flock-target>
-          <p class="label">Press statement</p>
-          <p>Symbia is a governed execution layer for agentic systems. It makes automation and autonomy observable, auditable, and safe. Identity, policy, and uncertainty bind to every action.</p>
-          <a class="btn inline" href="mailto:hello@symbia-labs.com">Press contact</a>
-        </div>
-        <div class="card" data-flock-target>
-          <p class="label">Founder Q&amp;A</p>
-          <ul class="use-list">
-            <li>What Symbia governs: execution, not prediction.</li>
-            <li>How autonomy stays bounded: scoped time, authority, and surfaces.</li>
-            <li>Why uncertainty is explicit: evidence and limits travel with actions.</li>
-            <li>Where Seed fits: local-first runtime that enforces these rules.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-  <section class="section cta" id="cta">
-    <div class="cta-card" data-flock-target>
-      <div>
-        <p class="eyebrow">Closing</p>
-        <h2>Build autonomy that behaves.</h2>
-        <p class="section-lede">If you’re deploying agents into real environments, you need more than tool calls. You need governed execution.</p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn primary" href="symbia-seed.html">Get started</a>
-        <a class="btn ghost" href="preprints.html">Read the papers</a>
-      </div>
-    </div>
-  </section>
   </main>
 
   <footer class="footer">
@@ -501,10 +162,10 @@ envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
         </div>
       </div>
       <div class="footer-links">
-        <a href="#primitives">Positioning</a>
-        <a href="#developers">Developers</a>
+        <a href="#problem">Problem</a>
+        <a href="#seed">Run Seed</a>
         <a href="mailto:hello@symbia-labs.com">Contact Us</a>
-        <a href="mailto:hello@symbia-labs.com">Request docs</a>
+        <a href="docs.html">Docs</a>
       </div>
     </div>
     <div class="footer-copy">
