@@ -390,7 +390,7 @@ a.outline {
   letter-spacing: 0.2px;
 }
 
-.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; margin-top: 10px; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px auto 14px; max-width: 840px; }
 
 .btn {
   display: inline-flex;
