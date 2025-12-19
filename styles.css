@@ -501,6 +501,23 @@ a.outline {
 }
 .section-lede { margin: 16px auto 0; color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 840px; }
 
+.section ul {
+  max-width: 840px;
+  margin: 0 auto;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.section ul li {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.section > p {
+  max-width: 840px;
+  margin: 16px auto 0;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
