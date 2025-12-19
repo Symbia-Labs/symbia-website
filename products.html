@@ -36,31 +36,29 @@
       <div class="hero-shell">
         <div class="hero-grid">
           <div class="hero-copy">
-            <h1>Products for governed agent execution.</h1>
-            <p class="lede">From the Seed runtime to observer surfaces, everything is built to keep automation observable, auditable, and safe.</p>
-            <div class="pill-row">
-              <span class="chip">Seed runtime</span>
-              <span class="chip">Observer UI</span>
-              <span class="chip">APIs</span>
+            <h1>Symbia Seed</h1>
+            <p class="lede">A governed execution runtime for AI and automation. Seed is where identity, constraints, and traceability actually live.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="symbia-seed.html">Run Seed locally</a>
             </div>
           </div>
           <div class="hero-panel">
             <div class="panel-head">
-              <p class="eyebrow">Availability</p>
-              <p class="muted">Runtime by access; specs and docs are open.</p>
+              <p class="eyebrow">Execution layer</p>
+              <p class="muted">Not a model. Not a prompt. The layer that governs what runs.</p>
             </div>
             <div class="fact-list">
               <div class="fact">
-                <p class="label">Seed</p>
-                <p class="value">Local-first governed execution with bounded pipelines.</p>
+                <p class="label">Identity</p>
+                <p class="value">Rooted in a genesis key with derived identities for actors and workers.</p>
               </div>
               <div class="fact">
-                <p class="label">Observer</p>
-                <p class="value">Trace, status, and artifact views with lineage.</p>
+                <p class="label">Constraints</p>
+                <p class="value">Policies enforced before execution, not after logs.</p>
               </div>
               <div class="fact">
-                <p class="label">API</p>
-                <p class="value">Health, status, trace, file/edit, threads endpoints.</p>
+                <p class="label">Traceability</p>
+                <p class="value">Every decision leaves an inspectable trail.</p>
               </div>
             </div>
           </div>
@@ -70,44 +68,115 @@
 
     <section class="section">
       <div class="section-head">
-        <p class="eyebrow">Product lineup</p>
-        <h2>What you can run</h2>
-        <p class="section-lede">Execution-first components with governance and audit built in.</p>
+        <p class="eyebrow">Definition</p>
+        <h2>What is Symbia Seed?</h2>
+        <p class="section-lede">Symbia Seed is a local-first execution runtime for running autonomous or semi-autonomous systems under explicit governance. It is not a model, and it is not a prompt framework. It sits above models and protocols and decides what work is allowed to run, under which identity, and with what constraints.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Boundaries</p>
+        <h2>What Seed is not</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card"><p>Not a large language model.</p></article>
+        <article class="card"><p>Not an agent marketplace.</p></article>
+        <article class="card"><p>Not a workflow SaaS.</p></article>
+        <article class="card"><p>Not a replacement for MCP or APIs. Models generate predictions. Protocols move messages. Seed governs execution.</p></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Why</p>
+        <h2>Why Seed exists</h2>
+        <p class="section-lede">When AI systems move from demos into real environments, the missing pieces are always the same: identity, continuity, constraints, and auditability. Seed makes those first-class instead of bolting them on with prompts and logs.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Architecture</p>
+        <h2>How Seed works (conceptually)</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card"><p>Canonical identity rooted in a genesis key.</p></article>
+        <article class="card"><p>Derived keys for installs, sessions, actors, and workers.</p></article>
+        <article class="card"><p>A mission and worker model for bounded execution.</p></article>
+        <article class="card"><p>An abstraction layer that records meaningful state transitions.</p></article>
+        <article class="card"><p>Artifact boundaries that enforce epistemic and policy constraints.</p></article>
+      </div>
+      <p class="section-lede">MCP, HTTP, MQTT, and other protocols are treated as ingress and egress. They never define cognition or authority.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Quickstart</p>
+        <h2>Quickstart: run Seed locally</h2>
+        <p class="section-lede">Seed is designed to be runnable on your own machine. No hosted service is required.</p>
       </div>
       <div class="card-grid">
         <article class="card">
-          <p class="label">Symbia Seed</p>
-          <p>Local-first governed execution runtime with policy-bound pipelines and traceable outputs.</p>
+          <p class="label">1. Download</p>
+          <p>Download the latest Symbia Seed release or clone the repository:</p>
+          <pre><code>git clone https://github.com/Symbia-Labs/symbia-seed
+cd symbia-seed</code></pre>
         </article>
         <article class="card">
-          <p class="label">Observer UI</p>
-          <p>Outside-in observability for missions, traces, identity snapshots, and artifact lineage.</p>
+          <p class="label">2. Install dependencies</p>
+          <p>Follow the installation instructions for your platform:</p>
+          <pre><code>./seed.sh install</code></pre>
         </article>
         <article class="card">
-          <p class="label">API surfaces</p>
-          <p>Endpoints for health, status, trace/log stream, deterministic file/edit, and threads.</p>
+          <p class="label">3. Boot a seed</p>
+          <p>Start a local Seed instance:</p>
+          <pre><code>./seed.sh boot</code></pre>
         </article>
         <article class="card">
-          <p class="label">Identity + epistemics</p>
-          <p>Genesis/Symbia Key and OEP envelopes to bind identity, provenance, and uncertainty to every action.</p>
+          <p class="label">4. Run your first mission</p>
+          <p>Create and execute a mission:</p>
+          <pre><code>./seed.sh mission run examples/hello-world.yaml</code></pre>
+        </article>
+      </div>
+      <p class="section-lede">These commands are intentionally simple. The complexity lives inside the runtime, not in user glue code.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Supporting components</p>
+        <h2>Supporting components</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <p class="label">Genesis Key System (GKS)</p>
+          <p>An open specification for canonical, non-inspectable identity. Seed uses GKS to root all execution in a durable identity.</p>
+        </article>
+        <article class="card">
+          <p class="label">Open Epistemic Protocol (OEP)</p>
+          <p>An open contract for expressing knowledge, inference, and uncertainty at artifact boundaries. Seed enforces OEP at runtime.</p>
         </article>
       </div>
     </section>
 
     <section class="section">
       <div class="section-head">
-        <p class="eyebrow">Access</p>
-        <h2>Request the runtime</h2>
-        <p class="section-lede">We grant access to teams deploying agentic systems where safety and accountability matter.</p>
+        <p class="eyebrow">Relationship</p>
+        <h2>Research, specs, and runtime</h2>
+        <p class="section-lede">Symbia Labs publishes research and open specifications. Symbia Seed is a governed runtime that embodies those ideas. The specs are portable; the runtime is opinionated by design.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Closing</p>
+        <h2>Seed is the place where autonomy becomes accountable.</h2>
+        <p class="section-lede">If you are serious about deploying autonomous systems, you need a place where execution is constrained by design. That place is Symbia Seed.</p>
       </div>
       <div class="cta-card">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h3>Get Seed and Observer</h3>
-          <p class="section-lede">Includes setup scripts, OpenAPI spec, and observer surfaces.</p>
-        </div>
         <div class="cta-actions">
-          <a class="btn primary" href="mailto:hello@symbia-labs.com">Request access</a>
+          <a class="btn primary" href="symbia-seed.html">Run Seed</a>
+          <a class="btn ghost" href="research.html">Read the research</a>
         </div>
       </div>
     </section>
