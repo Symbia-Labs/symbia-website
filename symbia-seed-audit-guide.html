@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbia Seed Audit Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="seed-page" data-page="audit-guide">
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="orb orb-a" aria-hidden="true"></div>
+  <div class="orb orb-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="header-row">
+      <a class="brand brand-link" href="index.html">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="brandline">Governed execution</p>
+        </div>
+      </a>
+    </div>
+    <nav class="nav-links nav-primary" aria-label="Primary">
+      <a href="research.html">Research</a>
+      <a href="preprints.html">Preprints</a>
+      <a href="blog.html">Blog</a>
+      <a href="https://github.com/Symbia-Labs">Open Source</a>
+      <a href="products.html">Products</a>
+      <a href="services.html">Services</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero article-hero">
+      <div class="hero-shell">
+        <div class="article-head">
+          <a class="back-link" href="symbia-seed.html">Back to Symbia Seed</a>
+          <p class="eyebrow">Audit guide</p>
+          <h1>Symbia Seed Audit Bundle - Living Specification</h1>
+          <p class="section-lede">How to read, verify, and replay a Seed audit bundle without privileged access. Evidence-first instructions for visibility and enforcement reviewers.</p>
+          <div class="meta-row article-meta">
+            <span class="chip ghost">Visibility</span>
+            <span class="chip ghost">Enforcement</span>
+            <span class="chip ghost">Evidence-led</span>
+            <span class="muted small" id="guide-updated"></span>
+          </div>
+          <div class="pill-row">
+            <a class="btn" href="#guide-body">Read the guide</a>
+            <a class="btn ghost" id="guide-pdf" href="assets/docs/symbia-seed-audit-guide.pdf" download>Download PDF</a>
+            <a class="btn ghost" href="content/symbia_seed_audit_bundle_reviewer_guide.md" download>Download markdown</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section article-section">
+      <div class="guide-layout">
+        <aside class="guide-sidebar" aria-label="Guide outline">
+          <div class="guide-card">
+            <div class="guide-card-head">
+              <p class="eyebrow">Outline</p>
+              <p class="muted small">Jump to any section</p>
+            </div>
+            <ol class="guide-toc" id="guide-toc">
+              <li class="muted small">Loading outline...</li>
+            </ol>
+          </div>
+          <div class="guide-card">
+            <p class="eyebrow">Bundles</p>
+            <p class="muted small">Working from an audit bundle? Start at Section 8 for the verification checklist, then follow the manual procedure in Section 9.3.</p>
+          </div>
+          <div class="guide-card">
+            <p class="eyebrow">Downloads</p>
+            <div class="guide-actions">
+              <a class="chip ghost" href="assets/docs/symbia-seed-audit-guide.pdf" download>PDF</a>
+              <a class="chip ghost" href="content/symbia_seed_audit_bundle_reviewer_guide.md" download>Markdown</a>
+            </div>
+          </div>
+        </aside>
+        <article class="content-article" id="guide-body">
+          <p class="muted">Loading guide...</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Symbia Labs" class="logo small">
+        <div>
+          <p class="eyebrow">Symbia Labs</p>
+          <p class="muted">Local-first · Inspectable · Audit-ready</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#primitives">Positioning</a>
+        <a href="index.html#developers">Developers</a>
+        <a href="mailto:hello@symbia-labs.com">Contact Us</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p class="muted small">Symbia Labs builds governed execution for agentic systems. No cookies by default.</p>
+    </div>
+  </footer>
+
+  <script src="bg.js"></script>
+  <script src="scripts/vendor/marked.min.js"></script>
+  <script src="scripts/guide.js"></script>
+  <script src="scripts/privacy.js"></script>
+</body>
+</html>

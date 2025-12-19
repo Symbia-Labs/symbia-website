@@ -764,6 +764,18 @@ a.outline {
 .mini-list-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .mini-list-item a { color: var(--text); text-decoration: none; }
 .mini-list-item a:hover { color: var(--accent); }
+.guide-layout { display: grid; grid-template-columns: minmax(240px, 280px) 1fr; gap: 16px; align-items: flex-start; position: relative; z-index: 2; }
+.guide-sidebar { display: flex; flex-direction: column; gap: 10px; position: sticky; top: 96px; }
+.guide-card { border: 1px solid var(--border); border-radius: 12px; padding: 12px 12px 14px; background: rgba(255,255,255,0.02); box-shadow: var(--shadow); display: grid; gap: 8px; }
+.guide-card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.guide-card .eyebrow { margin: 0; }
+.guide-card .muted { margin: 0; }
+.guide-toc { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.guide-toc li { line-height: 1.4; }
+.guide-toc a { color: var(--text); font-weight: 600; text-decoration: none; display: inline-block; }
+.guide-toc a:hover { color: var(--accent); }
+.guide-toc .toc-sub { padding-left: 14px; font-size: 14px; color: var(--muted); }
+.guide-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
 .section.cta { padding-bottom: 100px; }
 .cta-card { max-width: 1100px; margin: 0; padding: 22px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.14); background: rgba(10, 16, 28, 0.85); display: flex; align-items: center; justify-content: space-between; gap: 16px; box-shadow: none; }
@@ -837,6 +849,8 @@ a.outline {
   .docs-browser { grid-template-columns: 1fr; }
   .doc-list { max-height: none; padding-right: 0; }
   .doc-body { max-height: none; }
+  .guide-layout { grid-template-columns: 1fr; }
+  .guide-sidebar { position: relative; top: 0; }
 }
 
 @media (max-width: 640px) {
