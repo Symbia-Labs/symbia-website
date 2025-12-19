@@ -201,7 +201,8 @@ main::before {
   text-decoration: none;
 }
 
-.hero-image {
+.hero-image,
+.hero-video {
   width: 100%;
   max-width: 640px;
   height: auto;

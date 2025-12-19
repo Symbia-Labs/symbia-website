@@ -1,5 +1,5 @@
 (function () {
-  const GA_MEASUREMENT_ID = window.GA_MEASUREMENT_ID || (typeof GA_MEASUREMENT_ID !== "undefined" ? GA_MEASUREMENT_ID : null);
+  const GA_MEASUREMENT_ID = window.GA_MEASUREMENT_ID || null;
   const CONSENT_KEY = "symbia-analytics-consent";
   const banner = document.getElementById("privacy-banner");
   const acceptBtn = document.getElementById("privacy-accept");
