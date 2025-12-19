@@ -256,7 +256,15 @@ a.outline {
 .level-pill,
 .level-choice { display: none; }
 
-.eyebrow,
+.eyebrow {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
 .brandline { display: none; }
 
 .hero {
@@ -491,24 +499,26 @@ a.outline {
   font-size: clamp(24px, 3vw, 32px);
   text-transform: none;
 }
-.section-lede { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.4; }
+.section-lede { margin: 16px auto 0; color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 840px; }
 
 .card-grid {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
   max-width: 840px;
   margin: 0 auto;
 }
 
 .card {
-  padding: 0 0 16px;
-  border-radius: 0;
-  border: none;
-  background: transparent;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--panel);
   box-shadow: none;
 }
 
 .card:hover {
-  border-color: transparent;
+  border-color: var(--accent);
 }
 
 .card.hard {
