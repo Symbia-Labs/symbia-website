@@ -672,7 +672,7 @@ a.outline {
 .endpoint .label { color: var(--text); margin: 0 0 4px; }
 .small { font-size: 13px; }
 
-.content-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); position: relative; z-index: 2; }
+.content-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); position: relative; z-index: 2; max-width: 840px; margin: 0 auto; }
 .content-card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease; }
 .content-card:hover { border-color: rgba(125, 211, 252, 0.4); background: rgba(255, 255, 255, 0.02); transform: translateY(-2px); }
 .content-card h3 { margin: 6px 0 8px; }
@@ -681,7 +681,7 @@ a.outline {
 .meta-row { display: flex; align-items: center; justify-content: flex-start; gap: 10px; flex-wrap: wrap; }
 .content-card-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .tag-row { display: flex; gap: 6px; flex-wrap: wrap; }
-.empty-state { margin-top: 16px; padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+.empty-state { margin-top: 16px; padding: 16px; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); max-width: 840px; margin-left: auto; margin-right: auto; }
 .article-hero { padding: 40px 16px 18px 16px; margin-bottom: 10px; }
 .article-hero::after { display: none; }
 .article-hero .hero-shell { border: 1px solid rgba(255, 255, 255, 0.08); max-width: 1100px; width: min(1100px, 100%); margin: 0 auto; padding: 20px 20px 16px; }
