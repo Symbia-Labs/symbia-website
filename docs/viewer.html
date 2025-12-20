@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symbia Docs Viewer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body { background:#0b0f1c; color:#e7ecf7; font-family:'IBM Plex Sans', system-ui, -apple-system, sans-serif; }
+    .doc-shell { max-width: 900px; margin: 40px auto 60px; padding: 32px 28px; background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius: 14px; box-shadow: 0 12px 40px rgba(0,0,0,0.35); }
+    .doc-shell h1, .doc-shell h2, .doc-shell h3, .doc-shell h4, .doc-shell h5, .doc-shell h6 { color:#e7ecf7; }
+    .doc-shell a { color:#7bd8ff; }
+    .doc-shell pre { background: rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); padding:12px; border-radius:10px; overflow:auto; }
+    .doc-shell code { background: rgba(255,255,255,0.06); padding:2px 4px; border-radius:6px; }
+    .doc-shell ul, .doc-shell ol { padding-left: 24px; }
+    .doc-shell blockquote { border-left: 3px solid rgba(255,255,255,0.2); padding-left: 12px; color:#cfd7e6; }
+    .doc-meta { display:flex; justify-content: space-between; align-items:center; margin-bottom:16px; color:#9fb0cc; font-size:0.95rem; }
+    .doc-meta a { color:#9bdcff; }
+    .error { color:#ff9c9c; }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="doc-shell">
+    <div class="doc-meta">
+      <span id="doc-name"></span>
+      <a id="raw-link" href="#" download>Download markdown</a>
+    </div>
+    <div id="doc-content">Loading…</div>
+    <div id="doc-error" class="error" hidden></div>
+  </div>
+  <script>
+    (async function() {
+      const params = new URLSearchParams(location.search);
+      const doc = params.get('doc');
+      const contentEl = document.getElementById('doc-content');
+      const errorEl = document.getElementById('doc-error');
+      const nameEl = document.getElementById('doc-name');
+      const rawLink = document.getElementById('raw-link');
+      if (!doc) {
+        contentEl.textContent = '';
+        errorEl.hidden = false;
+        errorEl.textContent = 'Missing doc parameter.';
+        return;
+      }
+      nameEl.textContent = doc;
+      rawLink.href = `../${doc}`;
+      try {
+        const res = await fetch(`../${doc}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        contentEl.innerHTML = marked.parse(text);
+      } catch (e) {
+        contentEl.textContent = '';
+        errorEl.hidden = false;
+        errorEl.textContent = 'Unable to load document.';
+      }
+    })();
+  </script>
+</body>
+</html>
