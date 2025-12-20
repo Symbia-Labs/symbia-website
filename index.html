@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symbia Labs | Governed execution for agentic systems</title>
+  <title>Symbia Labs | Bounded, auditable AI execution</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -48,17 +48,16 @@
       </a>
     </div>
     <nav class="nav-links nav-primary" aria-label="Primary">
-      <a href="products.html">Products</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Product</a>
       <a href="research.html">Research</a>
-      <a href="services.html">Services</a>
-      <a href="docs.html">Docs</a>
     </nav>
   </header>
 
   <div class="anchor-links" aria-label="On this page">
     <a href="#epistemic">Problem</a>
     <a href="#what-is-symbia">Failure modes</a>
-    <a href="#problem">Symbia Seed</a>
+    <a href="#problem">Product</a>
     <a href="#cta">Contact</a>
   </div>
 
@@ -115,8 +114,8 @@
             <p class="lede" data-copy="hero.subhead">Symbia builds the execution layer that makes AI behavior bounded, auditable, and trustworthy.</p>
             <p class="muted" data-copy="hero.supporting">Today’s AI stacks treat probabilistic models as if they were stateful, authoritative systems. That architectural mistake leads to unpredictable behavior, silent failures, and systems no one can fully explain or control.</p>
             <div class="cta-row">
-              <a class="btn primary" href="symbia-seed.html">Run Symbia Seed</a>
-              <a class="btn ghost" href="research.html">View the Research</a>
+              <a class="btn primary" href="products.html">See the product</a>
+              <a class="btn ghost" href="research.html">View the research</a>
             </div>
             <div class="pill-row">
               <span class="chip">Bounded execution</span>
@@ -188,7 +187,7 @@
       <div class="section-head">
         <p class="eyebrow">Outcome</p>
         <h2>The Outcome Symbia Enables</h2>
-        <p class="section-lede">Symbia is built so teams can answer, with precision:</p>
+        <p class="section-lede">Teams can answer, with precision:</p>
         <ul class="use-list">
           <li>This action occurred for this reason</li>
           <li>Under this explicit authority</li>
@@ -196,311 +195,55 @@
           <li>Against this known prior state</li>
           <li>And it could not have occurred otherwise</li>
         </ul>
-        <p class="section-lede">This level of clarity is required to deploy AI into systems that handle money, access, infrastructure, or compliance.</p>
       </div>
     </section>
 
     <section id="problem" class="section problem-section">
       <div class="section-head">
-        <p class="eyebrow">Symbia Seed</p>
-        <h2>How the runtime enforces boundaries</h2>
-        <p class="section-lede">Symbia Seed is a local-first execution runtime that sits between AI models and the world they act upon.</p>
+        <p class="eyebrow">Product</p>
+        <h2>Symbia console and Seed runtime</h2>
+        <p class="section-lede">Primary product: the console at console.symbia-labs.com, backed by the local-first Seed runtime you can inspect.</p>
       </div>
       <div class="card-grid">
         <article class="card" data-flock-target>
+          <p class="label">Console</p>
+          <p>Exercise governed execution without installing anything locally.</p>
+        </article>
+        <article class="card" data-flock-target>
           <p class="label">Model boundary</p>
-          <p>Models never act directly; they propose and recommend.</p>
+          <p>Models only propose; the runtime enforces decisions deterministically.</p>
         </article>
         <article class="card" data-flock-target>
-          <p class="label">Deterministic decisions</p>
-          <p>Decisions are enforced outside the model by the runtime.</p>
+          <p class="label">Authority + state</p>
+          <p>Explicit identity, policy, and prior state are required before actions run.</p>
         </article>
         <article class="card" data-flock-target>
-          <p class="label">Explicit authority</p>
-          <p>Identity and authority are bound to every action before it runs.</p>
-        </article>
-        <article class="card" data-flock-target>
-          <p class="label">Durable state</p>
-          <p>State is ordered and inspectable over time so behavior can be audited.</p>
+          <p class="label">Auditable traces</p>
+          <p>Ordered, inspectable state so outcomes can be explained.</p>
         </article>
         <article class="card" data-flock-target>
           <p class="label">Fail closed</p>
-          <p>Failure defaults to stopping, not guessing.</p>
+          <p>Missing authority or evidence stops execution.</p>
         </article>
       </div>
-      <p class="section-lede">This turns AI from an opaque liability into something that can be deployed responsibly, audited confidently, and governed over time.</p>
-    </section>
-
-    <section class="section" id="mvv">
-      <div class="section-head">
-        <p class="eyebrow">Non-goals</p>
-        <h2>What Symbia Is Not</h2>
-        <p class="section-lede">Symbia does not grant AI authority. It enforces boundaries around it.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card" data-flock-target><p>Not an agent framework.</p></article>
-        <article class="card" data-flock-target><p>Not a prompt orchestration layer.</p></article>
-        <article class="card" data-flock-target><p>Not a memory plugin.</p></article>
-        <article class="card" data-flock-target><p>Not an autonomy accelerator.</p></article>
-        <article class="card" data-flock-target><p>Not a personality or behavior simulation.</p></article>
-      </div>
-      <p class="section-lede">Symbia enforces the boundaries that other layers assume but do not provide.</p>
-    </section>
-
-    <section class="section" id="primitives">
-      <div class="section-head">
-        <p class="eyebrow">Symbia Labs</p>
-        <h2>Research and stewardship for governed execution</h2>
-        <p class="section-lede">Symbia Labs is the research and stewardship arm of the project. Its role is to study real-world AI failures, define the correct architectural responses, and prevent conceptual drift.</p>
-        <p class="section-lede">The work of the lab becomes enforceable in code through Symbia Seed.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card" data-flock-target><p>Studies real incidents where AI drives access, finance, or infrastructure failures.</p></article>
-        <article class="card" data-flock-target><p>Designs the architectural controls needed to prevent repeats.</p></article>
-        <article class="card" data-flock-target><p>Maintains a coherent vocabulary so governance does not drift over time.</p></article>
-        <article class="card" data-flock-target><p>Ships those controls as enforceable runtime behavior in Seed.</p></article>
+      <p class="section-lede">Use the console for fast evaluation; run Seed locally for full control and integration.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://console.symbia-labs.com">Open console</a>
+        <a class="btn ghost" href="symbia-seed.html">Run Seed locally</a>
       </div>
     </section>
 
-    <section class="section" id="surfaces">
+    <section class="section" id="status">
       <div class="section-head">
         <p class="eyebrow">Status</p>
-        <h2 data-copy="early_surfaces_premise.headline">Deliberate build cadence</h2>
-        <p class="section-lede" data-copy="early_surfaces_premise.subhead">Symbia Seed is under active development and early deployment.</p>
-        <p class="section-lede" data-copy="early_surfaces_premise.body">The system is being built deliberately, with an emphasis on correctness, auditability, and long-term trust.</p>
-      </div>
-      <div class="split">
-        <div class="card stack" data-flock-target>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Deployment mode</p>
-              <p>Local-first runtime with controlled early users.</p>
-            </div>
-          </div>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Build focus</p>
-              <p>Deterministic enforcement, ordered state, and durable traces.</p>
-            </div>
-          </div>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Governance</p>
-              <p>Identity and authority requirements ship before new surfaces.</p>
-            </div>
-          </div>
-          <div class="stack-row">
-            <div class="dot"></div>
-            <div>
-              <p class="label">Review</p>
-              <p>Failures stop execution; traces stay explainable for audits.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card quote" data-flock-target>
-          <p class="label">Operating stance</p>
-          <p class="quote-text">When AI systems are trusted with authority, “we’ll fix it later” is not acceptable.</p>
-          <p class="muted">We ship only when we can show how authority, state, and outcomes remain inspectable.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="pillars">
-      <div class="section-head">
-        <p class="eyebrow">Assurances</p>
-        <h2 data-copy="continuity_pillars.headline">What must stay true in the runtime</h2>
-        <p class="section-lede" data-copy="continuity_pillars.subhead">Accountability requires explicit authority, state, and ordered traces.</p>
-        <p class="section-lede" data-copy="continuity_pillars.body">Seed enforces these pillars before and during execution.</p>
-      </div>
-      <div class="pillars">
-        <div class="pillar" data-flock-target>
-          <p class="label">Authority binding</p>
-          <h4>Every action is tied to an explicit key, policy, and issuer.</h4>
-        </div>
-        <div class="pillar" data-flock-target>
-          <p class="label">State awareness</p>
-          <h4>Decisions reference known prior state; drift is refused.</h4>
-        </div>
-        <div class="pillar" data-flock-target>
-          <p class="label">Ordered traces</p>
-          <h4>Execution is time-ordered and replayable for review.</h4>
-        </div>
-        <div class="pillar" data-flock-target>
-          <p class="label">Fail-safe execution</p>
-          <h4>When evidence or authority is missing, the runtime halts.</h4>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="process">
-      <div class="section-head">
-        <p class="eyebrow">Auditability</p>
-        <h2>Evidence from every action</h2>
-        <p class="section-lede">Every action produces a structured trace with reason, authority, and state.</p>
-        <p class="section-lede">Execution is ordered, attributable, and replayable so outcomes can be explained.</p>
-      </div>
-      <div class="process-grid">
-        <div class="timeline" data-flock-target>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Trace</p>
-              <p>Each step records why it ran and which constraints allowed it.</p>
-            </div>
-          </div>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Authority</p>
-              <p>Identity and authorizing policy are stamped before execution.</p>
-            </div>
-          </div>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">State</p>
-              <p>Known prior state is captured so decisions can be verified.</p>
-            </div>
-          </div>
-          <div class="time-row">
-            <div class="tick"></div>
-            <div>
-              <p class="label">Audit</p>
-              <p>Ordered traces show what ran, what was refused, and why.</p>
-            </div>
-          </div>
-        </div>
-        <div class="card code" data-flock-target id="quickstart">
-          <div class="panel-head">
-            <p class="eyebrow">Get Symbia Seed</p>
-            <p class="muted">Early access, by request.</p>
-          </div>
-          <p>Early access includes setup instructions, ./scripts/seed.sh, OpenAPI (assets/openapi.yaml), and the Observer UI with trace views so you can verify the runtime locally.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="symbia-seed.html">Run Seed locally</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="credibility">
-      <div class="section-head">
-        <p class="eyebrow">Evidence</p>
-        <h2 data-copy="credibility.headline">Proof you can audit</h2>
-        <p class="section-lede" data-copy="credibility.subhead">These surfaces come from the running Symbia Seed runtime.</p>
-        <p class="section-lede" data-copy="credibility.body">APIs, traces, and the observer UI show how authority, state, and outcomes are enforced before deployment.</p>
+        <h2>Deliberate build cadence</h2>
+        <p class="section-lede">Console is live; Seed is under active development and early deployment.</p>
       </div>
       <div class="card-grid">
-        <article class="card code" data-flock-target data-levels="3 4 5">
-          <p class="label">API</p>
-          <h3>Live endpoints</h3>
-          <p class="muted small">Health, status, identity, trace, and file/edit surfaces from the runtime.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="api.html">Open API explorer</a>
-            <a class="btn ghost" href="assets/openapi.yaml" download>Download YAML</a>
-          </div>
-        </article>
-        <article class="card code" data-flock-target data-levels="3 4 5">
-          <p class="label">Traces</p>
-          <h3>Evidence snippets</h3>
-          <p class="muted small">Each action is time-ordered with reason, authority, and state.</p>
-          <pre>
-{"timestamp":"2025-12-02T03:00:00Z","event":"proposal","summary":"worker proposes payout","meta":{"proposed_by":"worker.seed","mission":"payments.review","authority":"gks:fingerprint:2b8c"}}
-{"timestamp":"2025-12-02T03:00:05Z","event":"decision","summary":"refused: authority scope missing","meta":{"refused_by":"supervisor","policy":"payments.scope","state_version":"b3f2"}}</pre>
-        </article>
-        <article class="card" data-flock-target data-levels="1 2 3 4 5">
-          <p class="label">Run</p>
-          <h3>Verify locally</h3>
-          <ul class="use-list">
-            <li>Start Seed: <code>./scripts/seed.sh start</code> (API 8123, Observer 9000).</li>
-            <li>POST /event or /trace with authority and state to log missions.</li>
-            <li>GET /log/stream to see what ran, what was refused, and why.</li>
-            <li>View docs and status without leaving the runtime.</li>
-          </ul>
-        </article>
-        <article class="card code" data-flock-target data-levels="4 5">
-          <p class="label">OEP</p>
-          <h3>Epistemics with guardrails</h3>
-          <p class="muted small">Envelope keeps obligations/refusals/unknowns explicit.</p>
-          <pre>
-obligations: cite_sources, mark_hypotheses
-refusals: missing_provenance, user_constraints_violation
-epistemic_types: claim, hypothesis, observation, refusal
-envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
-        </article>
-        <article class="card" data-flock-target data-levels="2 3 4 5">
-          <p class="label">Identity</p>
-          <h3>Deterministic lineage</h3>
-          <p>Genesis Key fingerprints and Symbia Key constraints show up in status, identity snapshots, and traces. Evidence stays probabilistic; lineage stays deterministic and attributable.</p>
-          <div class="cta-row">
-            <a class="btn inline" href="docs.html">Docs overview</a>
-            <a class="btn ghost" href="mailto:hello@symbia-labs.com">Request deeper dive</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="developers">
-      <div class="section-head">
-        <p class="eyebrow">Developers</p>
-        <h2 data-copy="developers.headline">Run the execution layer on your machine</h2>
-        <p class="section-lede" data-copy="developers.subhead">Local-first runtime so you can inspect behavior before giving it authority.</p>
-        <p class="section-lede" data-copy="developers.body">Seed exposes APIs and the observer UI to show how identity, policy, and state are enforced.</p>
-      </div>
-      <div class="card-grid dev-grid">
-        <article class="card" data-flock-target>
-          <div class="card-top">
-            <p class="label">Symbia Seed (early)</p>
-            <p class="muted">Local-first runtime with supervisor, workers, and observer UI.</p>
-          </div>
-          <p class="muted" data-copy="developers.seed_summary">Deterministic enforcement layer you can inspect before integrating.</p>
-          <p class="muted small" data-copy="developers.seed_boot">Start with ./scripts/seed.sh start, then open 127.0.0.1 to inspect.</p>
-          <a class="btn inline" href="mailto:hello@symbia-labs.com">Request access</a>
-        </article>
-        <article class="card" data-flock-target>
-          <div class="card-top">
-            <p class="label">Missions, traces, endpoints</p>
-            <p class="muted">How to drive the substrate.</p>
-          </div>
-          <p data-copy="developers.missions">Post work to /event or /trace with authority and state to see how the runtime responds.</p>
-          <a class="btn inline" href="docs.html">View docs overview</a>
-        </article>
-        <article class="card" data-flock-target>
-          <div class="card-top">
-            <p class="label">Docs &amp; roadmaps</p>
-            <p class="muted">Architecture, identity, governance, and runtime surfaces.</p>
-          </div>
-          <p data-copy="developers.docs">Docs cover identity, policy, trace format, and operational expectations.</p>
-          <a class="btn inline" href="docs.html">View docs overview</a>
-        </article>
-      </div>
-
-    </section>
-
-    <section class="section" id="press">
-      <div class="section-head">
-        <p class="eyebrow">Press &amp; Media</p>
-        <h2>Execution with accountability</h2>
-        <p class="section-lede">Context for teams evaluating governed AI systems.</p>
-      </div>
-      <div class="split">
-        <div class="card" data-flock-target>
-          <p class="label">Press statement</p>
-          <p>Symbia is the execution layer for AI systems that must prove why they acted, under which authority, and against what state.</p>
-          <a class="btn inline" href="mailto:hello@symbia-labs.com">Press contact</a>
-        </div>
-        <div class="card" data-flock-target>
-          <p class="label">Founder Q&amp;A</p>
-          <ul class="use-list">
-            <li>What Symbia governs: execution, not judgment.</li>
-            <li>How actions stay bounded: explicit time, authority, and surfaces.</li>
-            <li>How uncertainty is handled: evidence and limits stay explicit.</li>
-            <li>Where Seed fits: local-first runtime that enforces these controls.</li>
-          </ul>
-        </div>
+        <article class="card" data-flock-target><p>Local-first runtime with controlled early users.</p></article>
+        <article class="card" data-flock-target><p>Focus: deterministic enforcement, ordered state, durable traces.</p></article>
+        <article class="card" data-flock-target><p>Governance requirements ship before new surfaces.</p></article>
+        <article class="card" data-flock-target><p>Failures halt execution; traces stay explainable.</p></article>
       </div>
     </section>
 
@@ -529,10 +272,10 @@ envelope: sha256 evidence hash, lineage: genesis_key_fingerprint</pre>
         </div>
       </div>
       <div class="footer-links">
-        <a href="#primitives">Symbia Labs</a>
-        <a href="#developers">Developers</a>
-        <a href="mailto:hello@symbia-labs.com">Contact Us</a>
-        <a href="mailto:hello@symbia-labs.com">Request docs</a>
+        <a href="index.html">Home</a>
+        <a href="products.html">Product</a>
+        <a href="research.html">Research</a>
+        <a href="mailto:hello@symbia-labs.com">Contact</a>
       </div>
     </div>
     <div class="footer-copy">
